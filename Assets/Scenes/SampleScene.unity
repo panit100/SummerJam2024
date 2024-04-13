@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 534758014}
   - component: {fileID: 534758013}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: InventoryManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,8 +289,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb8de791b4dfb7b47b6239811af5273e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  row: 6
-  column: 5
+  column: 10
+  row: 10
+  items:
+  - gridX: 1
+    gridY: 1
+    row: 3
+    column: 2
+  - gridX: 5
+    gridY: 1
+    row: 2
+    column: 2
 --- !u!4 &534758014
 Transform:
   m_ObjectHideFlags: 0

@@ -10,9 +10,17 @@ public class InventoryManager : MonoBehaviour
 
     int[][] inventorySlots;
 
+    public List<Item> items = new List<Item>();
+
     private void Start()
     {
         InitInventory();
+
+        for (int i = 0; i < items.Count; i++)
+        {
+            StoreItem(items[i], i);
+        }
+
         printIt();
     }
 
@@ -29,6 +37,21 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
+    void StoreItem(Item item, int index)
+    {
+        for (int x = 0; x < item.row; x++)
+        {
+            int gridX = item.gridX + x;
+            for (int y = 0; y < item.column; y++)
+            {
+                int gridY = item.gridY + y;
+                inventorySlots[gridX][gridY] = index;
+            }
+        }
+    }
+
+
 
     void printIt()
     {
