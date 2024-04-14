@@ -29,8 +29,14 @@ public class InventoryPanel : Singleton<InventoryPanel>
     {
         InitInventory();
 
-        var item2 = ItemManager.Instance.createItem(0);
-        StoreItem(0, 0, item2);
+        AddItemToInventory(0, 0, 0);
+    }
+
+    void AddItemToInventory(int id, int gridX, int gridY)
+    {
+        var newItem = ItemManager.Instance.createItem(id);
+        StoreItem(gridX, gridY, newItem);
+        newItem.EnableOnClickItem(false);
     }
 
     void InitInventory()
@@ -57,13 +63,6 @@ public class InventoryPanel : Singleton<InventoryPanel>
         newGrid.Init((int)gridIndex.x, (int)gridIndex.y);
         newGrid.onClickGrid += OnClickGrid;
         grids[(int)gridIndex.x, (int)gridIndex.y] = newGrid;
-    }
-
-    Vector2 GetGridByPosition(Vector2 position)
-    {
-        float gridX = (position.x - startPos.x) / offset;
-        float gridY = -((position.y - startPos.y) / offset);
-        return new Vector2(gridX, gridY);
     }
 
     Vector2 GetPositionByGrid(Vector2 gridPos)
@@ -154,7 +153,6 @@ public class InventoryPanel : Singleton<InventoryPanel>
 
             StoreItem(x, y, item);
             PlayerManager.Instance.OnPutDownItem();
-
             return;
         }
 
@@ -170,6 +168,8 @@ public class InventoryPanel : Singleton<InventoryPanel>
 
             OnPickupItem(item);
         }
+
+
 
     }
 

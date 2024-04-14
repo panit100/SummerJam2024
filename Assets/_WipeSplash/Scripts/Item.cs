@@ -25,6 +25,11 @@ public class Item : MonoBehaviour, IPointerClickHandler
             return;
 
         PlayerManager.Instance.OnPickUpItem(this);
+
+        if (gridX == -1)
+        {
+            StoragePanel.Instance.PickUpItem(this);
+        }
     }
 
     public void EnableOnClickItem(bool enable)

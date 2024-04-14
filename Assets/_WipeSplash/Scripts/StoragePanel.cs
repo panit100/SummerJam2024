@@ -29,15 +29,22 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     private void Start()
     {
         var item1 = ItemManager.Instance.createItem(0);
-        item1.rect.localPosition = GetRandomPositionInStorage();
+        item1.SetPosition(GetRandomPositionInStorage());
         StoreItem(item1);
     }
 
     void StoreItem(Item item)
     {
         item.rect.SetParent(itemContainer);
+        item.gridX = -1;
+        item.gridY = -1;
         items.Add(item);
         item.EnableOnClickItem(true);
+    }
+
+    public void PickUpItem(Item item)
+    {
+        items.Remove(item);
     }
 
     void MergeItem(Item item)
@@ -48,7 +55,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
             //Merge
             var newItem = ItemManager.Instance.createItem(_item.ItemData.nextLevel);
 
-            Vector2 tempPos = newItem.rect.localPosition;
+            Vector2 tempPos = item.rect.localPosition;
 
             items.Remove(item);
             items.Remove(_item);

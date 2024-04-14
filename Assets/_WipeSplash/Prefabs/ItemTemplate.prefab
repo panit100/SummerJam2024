@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3921afc0a14e344be54414a33ce09b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridX: 0
-  gridY: 0
+  gridX: -1
+  gridY: -1
   isRotate: 0
   horizontalImage: {fileID: 5521798392876018304}
   verticalImage: {fileID: 4530152584503223010}
