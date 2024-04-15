@@ -1,9 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class InventoryPanel : Singleton<InventoryPanel>
+public class InventoryPanel : MonoBehaviour
 {
     public InventoryGrid gridPrefab;
     public RectTransform gridContainer;
@@ -19,17 +20,18 @@ public class InventoryPanel : Singleton<InventoryPanel>
 
     InventoryGrid[,] grids;
 
-    public List<Item> items = new List<Item>();
+    List<Item> items = new List<Item>();
 
-    protected override void InitAfterAwake()
-    {
-    }
+    public List<StartItemConfig> startItemConfigs = new List<StartItemConfig>();
 
     private void Start()
     {
         InitInventory();
 
-        AddItemToInventory(0, 0, 0);
+        foreach (var item in startItemConfigs)
+        {
+            AddItemToInventory(item.itemID, item.gridX, item.gridY);
+        }
     }
 
     void AddItemToInventory(int id, int gridX, int gridY)
@@ -203,4 +205,12 @@ public class InventoryPanel : Singleton<InventoryPanel>
         }
 
     }
+}
+
+[Serializable]
+public class StartItemConfig
+{
+    public int gridX;
+    public int gridY;
+    public int itemID;
 }

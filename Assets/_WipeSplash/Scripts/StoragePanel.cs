@@ -8,7 +8,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     public RectTransform storageSpace;
     public Transform itemContainer;
 
-    public List<Item> items = new List<Item>();
+    List<Item> items = new List<Item>();
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -28,9 +28,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     private void Start()
     {
-        var item1 = ItemManager.Instance.createItem(0);
-        item1.SetPosition(GetRandomPositionInStorage());
-        StoreItem(item1);
+
     }
 
     void StoreItem(Item item)
@@ -49,6 +47,9 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     void MergeItem(Item item)
     {
+        if (item.ItemData.nextLevel == -1)
+            return;
+
         var _item = items.Find(i => (item.ItemData.id == i.ItemData.id) && (i != item));
         if (_item != null)
         {
@@ -86,5 +87,16 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         return new Vector2(randomPosX, randomPosY);
     }
 
+    void AddItemToStorage(Item item)
+    {
+        item.SetPosition(GetRandomPositionInStorage());
+        StoreItem(item);
+    }
 
+    void AddItemToStorage(int itemID)
+    {
+        var item = ItemManager.Instance.createItem(itemID);
+        item.SetPosition(GetRandomPositionInStorage());
+        StoreItem(item);
+    }
 }

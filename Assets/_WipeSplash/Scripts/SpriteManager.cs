@@ -10,7 +10,9 @@ public class SpriteManager : Singleton<SpriteManager>
 
     public Sprite GetSprite(string spriteName)
     {
-        Sprite sprite = Resources.Load<Sprite>($"Sprites/{spriteName}");
+        Sprite sprite = Resources.Load<Sprite>($"Sprites/Item/{spriteName}");
+        if (sprite == null)
+            sprite = Resources.Load<Sprite>("Sprites/300x200");
         return sprite;
     }
 }

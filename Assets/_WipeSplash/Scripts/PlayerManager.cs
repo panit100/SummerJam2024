@@ -6,6 +6,7 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     public Item holdingItem;
     public RectTransform canvas;
+    public InventoryPanel inventory;
 
     protected override void InitAfterAwake()
     {
