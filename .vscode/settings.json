@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "SummerJam2024.sln"
+    "dotnet.defaultSolution": "SummerJam2024.sln",
+    "editor.fontLigatures": true
 }

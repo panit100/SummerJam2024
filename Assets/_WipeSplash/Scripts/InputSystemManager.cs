@@ -13,7 +13,7 @@ public class InputSystemManager : Singleton<InputSystemManager>
     [SerializeField] InputActionAsset playerInputAction;
 
     #region UnityAction
-
+    public UnityAction onRotateItem;
 
     #endregion
 
@@ -67,6 +67,13 @@ public class InputSystemManager : Singleton<InputSystemManager>
     #endregion
 
     #region ControlFunction
+
+    void OnRotateItem(InputValue value)
+    {
+        var _value = value.Get<Vector2>();
+        if (_value.y != 0)
+            onRotateItem?.Invoke();
+    }
 
     #endregion
 }
