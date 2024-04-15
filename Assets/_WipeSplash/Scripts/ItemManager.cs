@@ -6,15 +6,14 @@ using UnityEngine;
 public class ItemManager : Singleton<ItemManager>
 {
     public Item itemPrefab;
-    public Transform itemContainer;
 
     protected override void InitAfterAwake()
     {
     }
 
-    public Item createItem(int itemID)
+    public Item createItem(int itemID, Transform parent)
     {
-        Item newItem = Instantiate(itemPrefab, itemContainer);
+        Item newItem = Instantiate(itemPrefab, parent);
         ItemData data = AllItemData.itemDatas.Find(data => data.id == itemID);
         newItem.Init(data);
         return newItem;

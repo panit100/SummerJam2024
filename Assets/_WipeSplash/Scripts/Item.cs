@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -19,8 +20,15 @@ public class Item : MonoBehaviour, IPointerClickHandler
 
     public RectTransform rect;
 
+    public UnityAction<Item> onUseItem;
+
+    public float cooldownTime = 0;
+
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (GameManager.Instance.gameState != GAMESTATE.INVENTORY)
+            return;
+
         if (PlayerManager.Instance.holdingItem != null)
             return;
 
@@ -77,5 +85,25 @@ public class Item : MonoBehaviour, IPointerClickHandler
             horizontalImage.gameObject.SetActive(true);
             verticalImage.gameObject.SetActive(false);
         }
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance.gameState != GAMESTATE.BATTLE)
+            return;
+
+        if (itemData.itemType == ItemType.DEFENSE)
+            return;
+
+        cooldownTime += Time.deltaTime;
+        if (cooldownTime >= itemData.cooldown)
+        {
+            onUseItem?.Invoke(this);
+        }
+    }
+
+    public void ResetItem()
+    {
+        cooldownTime = 0;
     }
 }

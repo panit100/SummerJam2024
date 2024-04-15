@@ -10,8 +10,13 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     List<Item> items = new List<Item>();
 
+    public List<int> startItemIds = new List<int>();
+
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (GameManager.Instance.gameState != GAMESTATE.INVENTORY)
+            return;
+
         if (PlayerManager.Instance.holdingItem == null)
             return;
 
@@ -28,7 +33,10 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     private void Start()
     {
-
+        foreach (var itemID in startItemIds)
+        {
+            AddItemToStorage(itemID);
+        }
     }
 
     void StoreItem(Item item)
@@ -54,7 +62,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         if (_item != null)
         {
             //Merge
-            var newItem = ItemManager.Instance.createItem(_item.ItemData.nextLevel);
+            var newItem = ItemManager.Instance.createItem(_item.ItemData.nextLevel, itemContainer);
 
             Vector2 tempPos = item.rect.localPosition;
 
@@ -95,7 +103,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     void AddItemToStorage(int itemID)
     {
-        var item = ItemManager.Instance.createItem(itemID);
+        var item = ItemManager.Instance.createItem(itemID, itemContainer);
         item.SetPosition(GetRandomPositionInStorage());
         StoreItem(item);
     }

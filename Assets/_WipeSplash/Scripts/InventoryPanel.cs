@@ -21,6 +21,7 @@ public class InventoryPanel : MonoBehaviour
     InventoryGrid[,] grids;
 
     List<Item> items = new List<Item>();
+    public List<Item> Items => items;
 
     public List<StartItemConfig> startItemConfigs = new List<StartItemConfig>();
 
@@ -34,9 +35,9 @@ public class InventoryPanel : MonoBehaviour
         }
     }
 
-    void AddItemToInventory(int id, int gridX, int gridY)
+    public void AddItemToInventory(int id, int gridX, int gridY)
     {
-        var newItem = ItemManager.Instance.createItem(id);
+        var newItem = ItemManager.Instance.createItem(id, itemContainer);
         StoreItem(gridX, gridY, newItem);
         newItem.EnableOnClickItem(false);
     }
@@ -189,6 +190,15 @@ public class InventoryPanel : MonoBehaviour
                 inventorySlots[_gridX][_gridY] = -1;
                 grids[_gridX, _gridY].StoreItem(null);
             }
+        }
+    }
+
+    public void RemoveAllItem()
+    {
+        foreach (var item in items)
+        {
+            RemoveItem(item);
+            Destroy(item.gameObject);
         }
     }
 
