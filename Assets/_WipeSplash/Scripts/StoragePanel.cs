@@ -101,7 +101,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         StoreItem(item);
     }
 
-    void AddItemToStorage(int itemID)
+    public void AddItemToStorage(int itemID)
     {
         var item = ItemManager.Instance.createItem(itemID, itemContainer);
         item.SetPosition(GetRandomPositionInStorage());

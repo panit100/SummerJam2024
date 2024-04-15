@@ -2124,12 +2124,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  gamePanel: {fileID: 462909613}
   playerPanel: {fileID: 1519757575}
   enemyPanel: {fileID: 1481387561}
   currentEnemy: 0
   enemies:
-  - hp: 20
-    block: 10
+  - hp: 10
+    block: 0
     stamina: 10
     regenStamina: 1
     baseCooldownRegenStamina: 2

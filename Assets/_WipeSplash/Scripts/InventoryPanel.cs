@@ -162,13 +162,13 @@ public class InventoryPanel : MonoBehaviour
         if (inventorySlots[x][y] == 0)
         {
             if (PlayerManager.Instance.holdingItem != null)
+            {
                 return;
+            }
 
             var grid = grids[x, y];
             Item item = grid.GetItem();
-
             RemoveItem(item);
-
             OnPickupItem(item);
         }
 

@@ -16,7 +16,9 @@ public class InventoryGrid : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if (GameManager.Instance.gameState != GAMESTATE.INVENTORY)
+        {
             return;
+        }
 
         onClickGrid?.Invoke(x, y);
     }

@@ -119,6 +119,7 @@ public class PlayerPanel : MonoBehaviour
         if (currentHp <= 0)
         {
             currentHp = 0;
+            UpdateStat();
             OnDie();
             return;
         }

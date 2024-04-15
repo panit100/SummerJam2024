@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
 {
     public GAMESTATE gameState = GAMESTATE.INVENTORY;
 
+    public RectTransform gamePanel;
     public PlayerPanel playerPanel;
     public PlayerPanel enemyPanel;
 
@@ -31,6 +32,8 @@ public class GameManager : Singleton<GameManager>
     {
         playerPanel.onDie += OnDie;
         enemyPanel.onDie += OnDie;
+
+        OnChangeState(GAMESTATE.INVENTORY);
     }
 
     void OnChangeState(GAMESTATE state)
@@ -39,8 +42,12 @@ public class GameManager : Singleton<GameManager>
         switch (gameState)
         {
             case GAMESTATE.INVENTORY:
+                gamePanel.localPosition = new Vector2(0, 0);
+                gamePanel.anchoredPosition = new Vector2(0, 0);
                 break;
             case GAMESTATE.SETUPBATTLE:
+                gamePanel.localPosition = new Vector2(-1920, 0);
+                gamePanel.anchoredPosition = new Vector2(-1920, 0);
                 SetupPlayer();
                 SetupEnemy(currentEnemy);
                 break;
@@ -87,6 +94,16 @@ public class GameManager : Singleton<GameManager>
     void OnDie(PlayerPanel player)
     {
         OnChangeState(GAMESTATE.ENDBATTLE);
+        //Random Add 2 Item to player Inventory
+        Item item1 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+        Item item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+        while (item2 == item1)
+        {
+            item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+        }
+
+        StoragePanel.Instance.AddItemToStorage(item1.ItemData.id);
+        StoragePanel.Instance.AddItemToStorage(item2.ItemData.id);
     }
 }
 
