@@ -32,6 +32,7 @@ public class PlayerPanel : MonoBehaviour
     float currentStamina = 0;
     float cooldownRegenStamina = 0;
 
+    public UnityAction onTakeDamage;
     public UnityAction<PlayerPanel> onDie;
 
     private void Update()
@@ -100,6 +101,7 @@ public class PlayerPanel : MonoBehaviour
 
     public void OnTakeDamage(int damage)
     {
+        onTakeDamage?.Invoke();
         if (currentBlock > 0)
         {
             currentBlock -= damage;
