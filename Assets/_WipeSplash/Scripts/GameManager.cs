@@ -17,10 +17,15 @@ public class GameManager : Singleton<GameManager>
 {
     public GAMESTATE gameState = GAMESTATE.INVENTORY;
 
-    public RectTransform gamePanel;
     public PlayerPanel playerPanel;
-    public PlayerPanel enemyPanel;
 
+    [Header("Enemy")]
+    public PlayerPanel enemyPanel;
+    public Image enemyImage;
+
+    [Header("UI")]
+    public RectTransform inventoryStatePanel;
+    public RectTransform fightStatePanel;
     public TMP_Text winText;
     public TMP_Text loseText;
     public Button endButton;
@@ -57,12 +62,16 @@ public class GameManager : Singleton<GameManager>
                     n.ResetItem();
                 }
 
-                gamePanel.localPosition = new Vector2(0, 0);
-                gamePanel.anchoredPosition = new Vector2(0, 0);
+                inventoryStatePanel.localPosition = new Vector2(0, 0);
+                inventoryStatePanel.anchoredPosition = new Vector2(0, 0);
+                fightStatePanel.localPosition = new Vector2(1920, 0);
+                fightStatePanel.anchoredPosition = new Vector2(-1920, 0);
                 break;
             case GAMESTATE.SETUPBATTLE:
-                gamePanel.localPosition = new Vector2(-1920, 0);
-                gamePanel.anchoredPosition = new Vector2(-1920, 0);
+                fightStatePanel.localPosition = new Vector2(0, 0);
+                fightStatePanel.anchoredPosition = new Vector2(0, 0);
+                inventoryStatePanel.localPosition = new Vector2(1920, 0);
+                inventoryStatePanel.anchoredPosition = new Vector2(-1920, 0);
                 SetupPlayer();
                 SetupEnemy(currentEnemy);
                 break;
@@ -121,6 +130,7 @@ public class GameManager : Singleton<GameManager>
         enemyPanel.stamina = enemies[enemyIndex].stamina;
         enemyPanel.regenStamina = enemies[enemyIndex].regenStamina;
         enemyPanel.baseCooldownRegenStamina = enemies[enemyIndex].baseCooldownRegenStamina;
+        enemyImage.sprite = enemies[enemyIndex].enemyImage;
 
         enemyPanel.SetupBattle();
     }
@@ -166,6 +176,7 @@ public class EnemyConfig
     public float stamina;
     public float regenStamina;
     public float baseCooldownRegenStamina;
+    public Sprite enemyImage;
 
     public List<StartItemConfig> startItemConfigs;
 }

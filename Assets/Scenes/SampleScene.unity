@@ -583,16 +583,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389293296}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1171899742}
+  m_Father: {fileID: 462909613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -721.58, y: -245.72}
+  m_AnchoredPosition: {x: -718.57983, y: -245.72}
   m_SizeDelta: {x: 421.54, y: 669.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389293298
@@ -661,13 +661,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1185218748}
   - {fileID: 1989736662}
+  - {fileID: 1163419684}
+  - {fileID: 389293297}
+  - {fileID: 1185218748}
   m_Father: {fileID: 1171899742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1920, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
@@ -859,7 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridPrefab: {fileID: 7275840361791779247, guid: 6045171a0b16c3f42b840e4a960696f4, type: 3}
   gridContainer: {fileID: 46174837}
-  row: 6
+  row: 5
   column: 5
   startPos: {x: 250, y: 435}
   offset: 100
@@ -1395,7 +1397,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873979690}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1404,7 +1406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: -15}
+  m_AnchoredPosition: {x: 499.99997, y: -15}
   m_SizeDelta: {x: 700, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873979692
@@ -1420,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.7880776, a: 0.20784314}
+  m_Color: {r: 0.24056602, g: 1, b: 0.8391786, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1497,7 +1499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storageSpace: {fileID: 873979691}
   itemContainer: {fileID: 685739653}
-  startItemIds: 09000000090000000a0000000b0000000c0000000c0000000d000000
+  startItemIds: 0000000000000000010000000600000006000000070000000c0000000c0000000f0000000f00000010000000
 --- !u!1 &924107283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,14 +1826,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163419683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1816887468}
   - {fileID: 1664633664}
-  m_Father: {fileID: 1171899742}
+  m_Father: {fileID: 462909613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1852,7 +1854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridPrefab: {fileID: 7275840361791779247, guid: 6045171a0b16c3f42b840e4a960696f4, type: 3}
   gridContainer: {fileID: 1816887468}
-  row: 6
+  row: 5
   column: 5
   startPos: {x: -800, y: 435}
   offset: 100
@@ -1952,8 +1954,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1163419684}
-  - {fileID: 389293297}
   - {fileID: 462909613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2166,13 +2166,29 @@ PrefabInstance:
       value: EnemyPanel
       objectReference: {fileID: 0}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: hp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1519757575}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: stamina
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 523451581}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: regenStamina
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: baseCooldownRegenStamina
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4248473110720258824, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2520,19 +2536,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
-  gamePanel: {fileID: 462909613}
   playerPanel: {fileID: 1519757575}
   enemyPanel: {fileID: 1481387561}
+  enemyImage: {fileID: 1448887093}
+  inventoryStatePanel: {fileID: 1185218748}
+  fightStatePanel: {fileID: 1989736662}
   winText: {fileID: 170295249}
   loseText: {fileID: 2041681582}
   endButton: {fileID: 1127396987}
   currentEnemy: 0
   enemies:
-  - hp: 10
+  - hp: 50
     block: 0
     stamina: 10
-    regenStamina: 1
-    baseCooldownRegenStamina: 2
+    regenStamina: 0.1
+    baseCooldownRegenStamina: 0.1
+    enemyImage: {fileID: 21300000, guid: 363b5b62ff661a8478fddfb56e929cdf, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -2543,11 +2562,12 @@ MonoBehaviour:
     - gridX: 3
       gridY: 1
       itemID: 0
-  - hp: 100
+  - hp: 50
     block: 20
     stamina: 10
     regenStamina: 1
-    baseCooldownRegenStamina: 2
+    baseCooldownRegenStamina: 0.1
+    enemyImage: {fileID: 21300000, guid: 32a0e52a59e3cb84ab5f5e2c059858fc, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -2799,13 +2819,29 @@ PrefabInstance:
       value: PlayerPanel
       objectReference: {fileID: 0}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: hp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1481387561}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: stamina
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1163419685}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: regenStamina
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
+      propertyPath: baseCooldownRegenStamina
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4248473110720258824, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

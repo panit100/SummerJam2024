@@ -79,7 +79,11 @@ public class PlayerPanel : MonoBehaviour
     void OnUseItem(Item item)
     {
         if (currentStamina < item.ItemData.staminaCost)
+        {
+            UpdateStat();
+            item.cooldownTime = 0;
             return;
+        }
 
         currentStamina -= item.ItemData.staminaCost;
         switch (item.ItemData.itemType)
@@ -138,6 +142,8 @@ public class PlayerPanel : MonoBehaviour
 
         if (currentStamina >= stamina)
             currentStamina = stamina;
+
+        UpdateStat();
     }
 
     void OnRegenHp(int regenHp)
@@ -145,6 +151,8 @@ public class PlayerPanel : MonoBehaviour
         currentHp += regenHp;
         if (currentHp >= hp)
             currentHp = hp;
+
+        UpdateStat();
     }
 
     void UpdateStat()
