@@ -92,3 +92,7 @@ MonoBehaviour:
   y: 0
   item: {fileID: 0}
   rect: {fileID: 7467237088318076253}
+  gridSprite: {fileID: 8806025249998697352}
+  normalGrid: {fileID: 21300000, guid: 415c2b519def53d4db7c3d67f07456f0, type: 3}
+  emptyGrid: {fileID: 21300000, guid: d5455af27c6f84b43b44da8450061125, type: 3}
+  fullGrid: {fileID: 21300000, guid: 189afecd4bd491443a02629a27a91750, type: 3}

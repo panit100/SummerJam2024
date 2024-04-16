@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storageSpace: {fileID: 873979691}
   itemContainer: {fileID: 685739653}
-  startItemIds: 0100000003000000030000000400000005000000
+  startItemIds: 09000000090000000a0000000b0000000c0000000c0000000d000000
 --- !u!1 &924107283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,13 +1857,7 @@ MonoBehaviour:
   startPos: {x: -800, y: 435}
   offset: 100
   itemContainer: {fileID: 1664633664}
-  startItemConfigs:
-  - gridX: 0
-    gridY: 0
-    itemID: 0
-  - gridX: 3
-    gridY: 1
-    itemID: 0
+  startItemConfigs: []
 --- !u!1 &1171899738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,9 +1952,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 462909613}
   - {fileID: 1163419684}
   - {fileID: 389293297}
+  - {fileID: 462909613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
