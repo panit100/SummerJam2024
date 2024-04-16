@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum GAMESTATE
 {
@@ -18,6 +20,10 @@ public class GameManager : Singleton<GameManager>
     public RectTransform gamePanel;
     public PlayerPanel playerPanel;
     public PlayerPanel enemyPanel;
+
+    public TMP_Text winText;
+    public TMP_Text loseText;
+    public Button endButton;
 
     public int currentEnemy = 0;
 
@@ -42,6 +48,15 @@ public class GameManager : Singleton<GameManager>
         switch (gameState)
         {
             case GAMESTATE.INVENTORY:
+                loseText.gameObject.SetActive(false);
+                winText.gameObject.SetActive(false);
+                endButton.gameObject.SetActive(false);
+
+                foreach (var n in StoragePanel.Instance.Items)
+                {
+                    n.ResetItem();
+                }
+
                 gamePanel.localPosition = new Vector2(0, 0);
                 gamePanel.anchoredPosition = new Vector2(0, 0);
                 break;
@@ -54,6 +69,8 @@ public class GameManager : Singleton<GameManager>
             case GAMESTATE.BATTLE:
                 break;
             case GAMESTATE.ENDBATTLE:
+                playerPanel.OnEndBattle();
+                enemyPanel.OnEndBattle();
                 break;
         }
     }
@@ -66,6 +83,23 @@ public class GameManager : Singleton<GameManager>
     public void OnStartBattle()
     {
         OnChangeState(GAMESTATE.BATTLE);
+    }
+    public void OnEndBattle()
+    {
+        if (gameState != GAMESTATE.ENDBATTLE)
+            return;
+
+        if (currentEnemy < enemies.Count)
+        {
+            OnChangeState(GAMESTATE.INVENTORY);
+        }
+        else
+            OnEndGame();
+    }
+
+    public void OnEndGame()
+    {
+        print("EndGame");
     }
 
     void SetupPlayer()
@@ -94,16 +128,33 @@ public class GameManager : Singleton<GameManager>
     void OnDie(PlayerPanel player)
     {
         OnChangeState(GAMESTATE.ENDBATTLE);
-        //Random Add 2 Item to player Inventory
-        Item item1 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
-        Item item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
-        while (item2 == item1)
+
+        if (player == playerPanel)
         {
-            item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+            //TODO open lose text
+            winText.gameObject.SetActive(false);
+            loseText.gameObject.SetActive(true);
+        }
+        else
+        {
+            //TODO open win text
+            winText.gameObject.SetActive(true);
+            loseText.gameObject.SetActive(false);
+
+            Item item1 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+            Item item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+            while (item2 == item1)
+            {
+                item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
+            }
+
+            StoragePanel.Instance.AddItemToStorage(item1.ItemData.id);
+            StoragePanel.Instance.AddItemToStorage(item2.ItemData.id);
+            currentEnemy++;
         }
 
-        StoragePanel.Instance.AddItemToStorage(item1.ItemData.id);
-        StoragePanel.Instance.AddItemToStorage(item2.ItemData.id);
+        endButton.gameObject.SetActive(true);
+
     }
 }
 

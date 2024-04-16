@@ -200,6 +200,8 @@ public class InventoryPanel : MonoBehaviour
             RemoveItem(item);
             Destroy(item.gameObject);
         }
+
+        items.Clear();
     }
 
     void printGrid()

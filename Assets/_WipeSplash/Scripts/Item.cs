@@ -60,7 +60,7 @@ public class Item : MonoBehaviour, IPointerClickHandler
         verticalImage.sprite = itemSprite;
         verticalImage.SetNativeSize();
         verticalCooldown.sprite = itemSprite;
-        verticalImage.SetNativeSize();
+        verticalCooldown.SetNativeSize();
     }
 
     public void SetPosition(Vector2 position)

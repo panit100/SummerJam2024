@@ -9,7 +9,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     public Transform itemContainer;
 
     List<Item> items = new List<Item>();
-
+    public List<Item> Items => items;
     public List<int> startItemIds = new List<int>();
 
     public void OnPointerClick(PointerEventData eventData)

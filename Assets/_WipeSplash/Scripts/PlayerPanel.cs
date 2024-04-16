@@ -133,11 +133,16 @@ public class PlayerPanel : MonoBehaviour
     void OnRegenStamina(float regenStamina)
     {
         currentStamina += regenStamina;
+
+        if (currentStamina >= stamina)
+            currentStamina = stamina;
     }
 
     void OnRegenHp(int regenHp)
     {
         currentHp += regenHp;
+        if (currentHp >= hp)
+            currentHp = hp;
     }
 
     void UpdateStat()
