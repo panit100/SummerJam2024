@@ -9,7 +9,7 @@ using System;
 public class PlayerPanel : MonoBehaviour
 {
     [Header("Stat")]
-    public int hp = 100;
+    public float hp = 100;
     public int block = 0;
     public float stamina = 10;
     public float regenStamina = 1f;
@@ -26,7 +26,7 @@ public class PlayerPanel : MonoBehaviour
     public InventoryPanel inventory;
     public PlayerPanel enemy;
 
-    int currentHp = 0;
+    float currentHp = 0;
     int currentBlock = 0;
     int tempMaxBlock = 0;
     float currentStamina = 0;
@@ -146,7 +146,7 @@ public class PlayerPanel : MonoBehaviour
         UpdateStat();
     }
 
-    void OnRegenHp(int regenHp)
+    void OnRegenHp(float regenHp)
     {
         currentHp += regenHp;
         if (currentHp >= hp)
@@ -163,7 +163,7 @@ public class PlayerPanel : MonoBehaviour
 
     void UpdateStatText()
     {
-        hpText.text = $"{currentHp}/{hp}";
+        hpText.text = $"{Math.Round(currentHp, 2)}/{hp}";
         blockText.text = $"{currentBlock}/{tempMaxBlock}";
         staminaText.text = $"{Math.Round(currentStamina, 2)}/{stamina}";
     }

@@ -92,8 +92,8 @@ public static class AllItemData
             column = 2,
             name = "ปืนทะลวงสวรรค์",
             spriteName = "NormalAttack_LV3",
-            minDamage = 3,
-            maxDamage = 6,
+            minDamage = 4,
+            maxDamage = 7,
             block = 0,
             regenHp = 0,
             regenStamina = 0,
@@ -239,10 +239,10 @@ public static class AllItemData
             minDamage = 0,
             maxDamage = 0,
             block = 0,
-            regenHp = 3,
+            regenHp = 3.5f,
             regenStamina = 0,
             staminaCost = 0,
-            cooldown = 4.5f,
+            cooldown = 3f,
             itemType = ItemType.SUPPORT
         },
         new ItemData{

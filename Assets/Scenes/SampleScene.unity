@@ -1632,7 +1632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storageSpace: {fileID: 873979691}
   itemContainer: {fileID: 685739653}
-  startItemIds: 0000000000000000010000000600000006000000070000000c0000000c0000000f0000000f00000010000000
+  startItemIds: 0300000007000000090000000c0000000c00000010000000
   randomGashapon: 0
 --- !u!1 &924107283
 GameObject:
@@ -2846,10 +2846,6 @@ MonoBehaviour:
       gridY: 3
       itemID: 15
       isRotate: 0
-    - gridX: 3
-      gridY: 0
-      itemID: 7
-      isRotate: 0
   - hp: 60
     block: 8
     stamina: 12
@@ -2865,10 +2861,6 @@ MonoBehaviour:
       gridY: 0
       itemID: 4
       isRotate: 1
-    - gridX: 0
-      gridY: 3
-      itemID: 4
-      isRotate: 0
     - gridX: 3
       gridY: 3
       itemID: 15
@@ -2900,13 +2892,9 @@ MonoBehaviour:
       gridY: 0
       itemID: 16
       isRotate: 0
-    - gridX: 3
-      gridY: 3
-      itemID: 7
-      isRotate: 0
   - hp: 60
     block: 0
-    stamina: 15
+    stamina: 12
     regenStamina: 0.5
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: 363b5b62ff661a8478fddfb56e929cdf, type: 3}
@@ -2920,14 +2908,6 @@ MonoBehaviour:
       itemID: 4
       isRotate: 0
     - gridX: 3
-      gridY: 2
-      itemID: 3
-      isRotate: 1
-    - gridX: 4
-      gridY: 2
-      itemID: 3
-      isRotate: 1
-    - gridX: 3
       gridY: 0
       itemID: 13
       isRotate: 0
@@ -2936,7 +2916,7 @@ MonoBehaviour:
       itemID: 17
       isRotate: 1
   - hp: 60
-    block: 8
+    block: 12
     stamina: 12
     regenStamina: 0.5
     baseCooldownRegenStamina: 0.1
@@ -2952,7 +2932,7 @@ MonoBehaviour:
       isRotate: 0
     - gridX: 3
       gridY: 0
-      itemID: 1
+      itemID: 0
       isRotate: 0
     - gridX: 3
       gridY: 1
@@ -2968,7 +2948,7 @@ MonoBehaviour:
       isRotate: 0
   - hp: 100
     block: 0
-    stamina: 12
+    stamina: 15
     regenStamina: 1
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: 363b5b62ff661a8478fddfb56e929cdf, type: 3}
@@ -2980,23 +2960,23 @@ MonoBehaviour:
     - gridX: 0
       gridY: 2
       itemID: 17
-      isRotate: 0
-    - gridX: 3
-      gridY: 0
-      itemID: 7
-      isRotate: 0
-    - gridX: 3
-      gridY: 2
-      itemID: 7
-      isRotate: 0
-    - gridX: 3
-      gridY: 1
+      isRotate: 1
+    - gridX: 0
+      gridY: 3
       itemID: 14
       isRotate: 1
     - gridX: 3
-      gridY: 4
-      itemID: 15
+      gridY: 0
+      itemID: 5
       isRotate: 1
+    - gridX: 3
+      gridY: 3
+      itemID: 15
+      isRotate: 0
+    - gridX: 4
+      gridY: 3
+      itemID: 15
+      isRotate: 0
 --- !u!4 &1738505406
 Transform:
   m_ObjectHideFlags: 0
@@ -3239,7 +3219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: hp
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: enemy
@@ -3247,7 +3227,7 @@ PrefabInstance:
       objectReference: {fileID: 1481387561}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: stamina
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: inventory
@@ -3255,7 +3235,7 @@ PrefabInstance:
       objectReference: {fileID: 1163419685}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: regenStamina
-      value: 0.1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 3380270839847511844, guid: 58e775c87fbb996419fc5caa31850556, type: 3}
       propertyPath: baseCooldownRegenStamina
