@@ -100,6 +100,7 @@ public class GameManager : Singleton<GameManager>
 
         if (currentEnemy < enemies.Count)
         {
+            StoragePanel.Instance.randomGashapon = true;
             OnChangeState(GAMESTATE.INVENTORY);
         }
         else
@@ -122,7 +123,7 @@ public class GameManager : Singleton<GameManager>
 
         foreach (var n in enemies[enemyIndex].startItemConfigs)
         {
-            enemyPanel.inventory.AddItemToInventory(n.itemID, n.gridX, n.gridY);
+            enemyPanel.inventory.AddItemToInventory(n.itemID, n.gridX, n.gridY, n.isRotate);
         }
 
         enemyPanel.hp = enemies[enemyIndex].hp;

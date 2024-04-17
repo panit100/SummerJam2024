@@ -36,13 +36,15 @@ public class InventoryPanel : MonoBehaviour
 
         foreach (var item in startItemConfigs)
         {
-            AddItemToInventory(item.itemID, item.gridX, item.gridY);
+            AddItemToInventory(item.itemID, item.gridX, item.gridY, item.isRotate);
         }
     }
 
-    public void AddItemToInventory(int id, int gridX, int gridY)
+    public void AddItemToInventory(int id, int gridX, int gridY, bool isRotate)
     {
         var newItem = ItemManager.Instance.createItem(id, itemContainer);
+        if (isRotate)
+            newItem.OnRotate();
         StoreItem(gridX, gridY, newItem);
         newItem.EnableOnClickItem(false);
     }
@@ -300,4 +302,5 @@ public class StartItemConfig
     public int gridX;
     public int gridY;
     public int itemID;
+    public bool isRotate;
 }
