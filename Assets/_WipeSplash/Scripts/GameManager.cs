@@ -23,6 +23,9 @@ public class GameManager : Singleton<GameManager>
     public EnemyPanel enemyPanel;
     public Image enemyImage;
 
+    [Header("Background")]
+    [SerializeField] private Image backgroundImage;
+
     [Header("UI")]
     public RectTransform inventoryStatePanel;
     public RectTransform fightStatePanel;
@@ -140,6 +143,7 @@ public class GameManager : Singleton<GameManager>
         enemyPanel.regenStamina = enemies[enemyIndex].regenStamina;
         enemyPanel.baseCooldownRegenStamina = enemies[enemyIndex].baseCooldownRegenStamina;
         enemyImage.sprite = enemies[enemyIndex].enemyImage;
+        backgroundImage.sprite = enemies[enemyIndex].enemyBackground;
 
         enemyPanel.SetupSprite();
         enemyPanel.SetupBattle();
@@ -186,8 +190,14 @@ public class EnemyConfig
     public float stamina;
     public float regenStamina;
     public float baseCooldownRegenStamina;
+
+    [Header("Enemy Sprite")]
     public Sprite enemyImage;
     public Sprite enemyHurtSprite;
+
+    [Header("Background")]
+    public Sprite enemyBackground;
+
 
     public List<StartItemConfig> startItemConfigs;
 }

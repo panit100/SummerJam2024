@@ -2989,6 +2989,7 @@ MonoBehaviour:
   playerPanel: {fileID: 1519757575}
   enemyPanel: {fileID: 1656418570}
   enemyImage: {fileID: 1448887093}
+  backgroundImage: {fileID: 612811354}
   inventoryStatePanel: {fileID: 1185218748}
   fightStatePanel: {fileID: 1989736662}
   winText: {fileID: 170295249}
@@ -3003,6 +3004,7 @@ MonoBehaviour:
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     enemyHurtSprite: {fileID: 21300000, guid: 03f27c83e9579884097c5870f78dcf88, type: 3}
+    enemyBackground: {fileID: 21300000, guid: 86d54a805379b8947b19b54647568893, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -3035,6 +3037,7 @@ MonoBehaviour:
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
     enemyHurtSprite: {fileID: 21300000, guid: a2dd97b645bfe8f4cab793259ad9d2db, type: 3}
+    enemyBackground: {fileID: 21300000, guid: f7160b8c13d35bb40916c1a67ba2280d, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -3059,6 +3062,7 @@ MonoBehaviour:
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
     enemyHurtSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    enemyBackground: {fileID: 21300000, guid: 5ff3fa25ffc28ac449744c6fd989c401, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -3083,6 +3087,7 @@ MonoBehaviour:
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
     enemyHurtSprite: {fileID: 21300000, guid: 69e7a894a45b41d4b9645fff140b27b1, type: 3}
+    enemyBackground: {fileID: 21300000, guid: f9344de538e19db43b085e093b425ff2, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -3107,6 +3112,7 @@ MonoBehaviour:
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}
     enemyHurtSprite: {fileID: 21300000, guid: baa143587130f94429a36ffc29a9eb03, type: 3}
+    enemyBackground: {fileID: 21300000, guid: e1828e003bae6f74192427b97a4ba8da, type: 3}
     startItemConfigs:
     - gridX: 0
       gridY: 0
@@ -3139,6 +3145,7 @@ MonoBehaviour:
     baseCooldownRegenStamina: 0.1
     enemyImage: {fileID: 21300000, guid: 363b5b62ff661a8478fddfb56e929cdf, type: 3}
     enemyHurtSprite: {fileID: 0}
+    enemyBackground: {fileID: 0}
     startItemConfigs:
     - gridX: 0
       gridY: 0
