@@ -23,6 +23,11 @@ public class InventoryPanel : MonoBehaviour
     List<Item> items = new List<Item>();
     public List<Item> Items => items;
 
+    int currentGridX = -1, currentGridY = -1;
+    public int CurrentGridX => currentGridX;
+    public int CurrentGridY => currentGridY;
+
+
     public List<StartItemConfig> startItemConfigs = new List<StartItemConfig>();
 
     private void Start()
@@ -31,13 +36,15 @@ public class InventoryPanel : MonoBehaviour
 
         foreach (var item in startItemConfigs)
         {
-            AddItemToInventory(item.itemID, item.gridX, item.gridY);
+            AddItemToInventory(item.itemID, item.gridX, item.gridY, item.isRotate);
         }
     }
 
-    public void AddItemToInventory(int id, int gridX, int gridY)
+    public void AddItemToInventory(int id, int gridX, int gridY, bool isRotate)
     {
         var newItem = ItemManager.Instance.createItem(id, itemContainer);
+        if (isRotate)
+            newItem.OnRotate();
         StoreItem(gridX, gridY, newItem);
         newItem.EnableOnClickItem(false);
     }
@@ -65,6 +72,8 @@ public class InventoryPanel : MonoBehaviour
         newGrid.rect.localPosition = gridPos;
         newGrid.Init((int)gridIndex.x, (int)gridIndex.y);
         newGrid.onClickGrid += OnClickGrid;
+        newGrid.onEnterGrid += OnEnterGrid;
+        newGrid.onExitGrid += OnExitGrid;
         grids[(int)gridIndex.x, (int)gridIndex.y] = newGrid;
     }
 
@@ -94,6 +103,7 @@ public class InventoryPanel : MonoBehaviour
                 {
                     inventorySlots[_gridX][_gridY] = 0;
                     grids[_gridX, _gridY].StoreItem(item);
+                    grids[_gridX, _gridY].ChangeGridSprite(GridStatus.FULL);
 
                 }
             }
@@ -108,6 +118,7 @@ public class InventoryPanel : MonoBehaviour
     public void OnPickupItem(Item item)
     {
         PlayerManager.Instance.OnPickUpItem(item);
+        OnExitGrid(item.gridX, item.gridY);
         items.Remove(item);
     }
 
@@ -171,9 +182,75 @@ public class InventoryPanel : MonoBehaviour
             RemoveItem(item);
             OnPickupItem(item);
         }
+    }
 
+    public void OnEnterGrid(int x, int y)
+    {
+        if (PlayerManager.Instance.holdingItem == null)
+            return;
 
+        currentGridX = x;
+        currentGridY = y;
+        var item = PlayerManager.Instance.holdingItem;
 
+        var itemRow = item.isRotate == false ? item.ItemData.row : item.ItemData.column;
+        var itemColumn = item.isRotate == false ? item.ItemData.column : item.ItemData.row;
+
+        for (int _x = 0; _x < itemRow; _x++)
+        {
+            int _gridX = x + _x;
+            for (int _y = 0; _y < itemColumn; _y++)
+            {
+                int _gridY = y + _y;
+                if (_gridX >= inventorySlots.Length || _gridY >= inventorySlots[_gridX].Length)
+                {
+                    continue;
+                }
+                else if (grids[_gridX, _gridY].item != null)
+                {
+                    grids[_gridX, _gridY].ChangeGridSprite(GridStatus.FULL);
+                }
+                else if (grids[_gridX, _gridY].item == null)
+                {
+                    grids[_gridX, _gridY].ChangeGridSprite(GridStatus.EMPTY);
+                }
+            }
+        }
+
+    }
+
+    public void OnExitGrid(int x, int y)
+    {
+        if (PlayerManager.Instance.holdingItem == null)
+            return;
+
+        currentGridX = -1;
+        currentGridY = -1;
+        var item = PlayerManager.Instance.holdingItem;
+
+        var itemRow = item.isRotate == false ? item.ItemData.row : item.ItemData.column;
+        var itemColumn = item.isRotate == false ? item.ItemData.column : item.ItemData.row;
+
+        for (int _x = 0; _x < itemRow; _x++)
+        {
+            int _gridX = x + _x;
+            for (int _y = 0; _y < itemColumn; _y++)
+            {
+                int _gridY = y + _y;
+                if (_gridX >= inventorySlots.Length || _gridY >= inventorySlots[_gridX].Length)
+                {
+                    continue;
+                }
+                else if (grids[_gridX, _gridY].item != null)
+                {
+                    grids[_gridX, _gridY].ChangeGridSprite(GridStatus.FULL);
+                }
+                else if (grids[_gridX, _gridY].item == null)
+                {
+                    grids[_gridX, _gridY].ChangeGridSprite(GridStatus.NORMAL);
+                }
+            }
+        }
     }
 
     void RemoveItem(Item item)
@@ -225,4 +302,5 @@ public class StartItemConfig
     public int gridX;
     public int gridY;
     public int itemID;
+    public bool isRotate;
 }

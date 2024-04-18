@@ -49,7 +49,13 @@ public class PlayerManager : Singleton<PlayerManager>
         if (holdingItem == null)
             return;
 
+        int tempX = inventory.CurrentGridX;
+        int tempY = inventory.CurrentGridY;
+        inventory.OnExitGrid(tempX, tempY);
+
         holdingItem.OnRotate();
+
+        inventory.OnEnterGrid(tempX, tempY);
     }
 
     void UpdateItemPosition()

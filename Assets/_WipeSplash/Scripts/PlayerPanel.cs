@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 using System;
+using DG.Tweening;
 
 public class PlayerPanel : MonoBehaviour
 {
     [Header("Stat")]
-    public int hp = 100;
+    public float hp = 100;
     public int block = 0;
     public float stamina = 10;
     public float regenStamina = 1f;
@@ -23,16 +24,38 @@ public class PlayerPanel : MonoBehaviour
     public Image staminaBar;
     public TMP_Text staminaText;
 
+    [Header("Character Image")]
+    [SerializeField] private Image playerImage;
+    [SerializeField] protected Sprite defaultSprite;
+    [SerializeField] protected Sprite hurtSprite;
+    [SerializeField] private float bounceValue;
+    [SerializeField] private Image splashImage;
+    private Vector3 startPosition;
+
+    [Header("System")]
     public InventoryPanel inventory;
     public PlayerPanel enemy;
 
-    int currentHp = 0;
+    float currentHp = 0;
     int currentBlock = 0;
     int tempMaxBlock = 0;
     float currentStamina = 0;
     float cooldownRegenStamina = 0;
 
+    public UnityAction onTakeDamage;
     public UnityAction<PlayerPanel> onDie;
+
+    void Start()
+    {
+        BouncePositionSetup();
+        splashImage.color = new Color(1, 1, 1, 0);
+
+        SetupAdditional();
+    }
+    protected virtual void SetupAdditional()
+    {
+
+    }
 
     private void Update()
     {
@@ -78,7 +101,11 @@ public class PlayerPanel : MonoBehaviour
     void OnUseItem(Item item)
     {
         if (currentStamina < item.ItemData.staminaCost)
+        {
+            UpdateStat();
+            item.cooldownTime = 0;
             return;
+        }
 
         currentStamina -= item.ItemData.staminaCost;
         switch (item.ItemData.itemType)
@@ -100,6 +127,7 @@ public class PlayerPanel : MonoBehaviour
 
     public void OnTakeDamage(int damage)
     {
+        onTakeDamage?.Invoke();
         if (currentBlock > 0)
         {
             currentBlock -= damage;
@@ -115,6 +143,8 @@ public class PlayerPanel : MonoBehaviour
         }
 
         currentHp -= damage;
+
+        DamageAnimationSequence();
         UpdateStat();
         if (currentHp <= 0)
         {
@@ -123,6 +153,27 @@ public class PlayerPanel : MonoBehaviour
             OnDie();
             return;
         }
+    }
+
+    void BouncePositionSetup()
+    {
+        startPosition = playerImage.rectTransform.localPosition;
+    }
+    void DamageAnimationSequence()
+    {
+        playerImage.rectTransform.DOKill();
+        splashImage.DOKill();
+
+        playerImage.sprite = hurtSprite;
+        splashImage.color = new Color(1, 1, 1, 1);
+
+        playerImage.rectTransform.localPosition = startPosition + (Vector3.left * bounceValue);
+        playerImage.rectTransform.DOLocalMove(startPosition, .5f).OnComplete(() => CompleteBounce());
+        splashImage.DOFade(0, .5f).SetEase(Ease.InBounce);
+    }
+    void CompleteBounce()
+    {
+        playerImage.sprite = defaultSprite;
     }
 
     void OnDie()
@@ -136,13 +187,17 @@ public class PlayerPanel : MonoBehaviour
 
         if (currentStamina >= stamina)
             currentStamina = stamina;
+
+        UpdateStat();
     }
 
-    void OnRegenHp(int regenHp)
+    void OnRegenHp(float regenHp)
     {
         currentHp += regenHp;
         if (currentHp >= hp)
             currentHp = hp;
+
+        UpdateStat();
     }
 
     void UpdateStat()
@@ -153,7 +208,7 @@ public class PlayerPanel : MonoBehaviour
 
     void UpdateStatText()
     {
-        hpText.text = $"{currentHp}/{hp}";
+        hpText.text = $"{Math.Round(currentHp, 2)}/{hp}";
         blockText.text = $"{currentBlock}/{tempMaxBlock}";
         staminaText.text = $"{Math.Round(currentStamina, 2)}/{stamina}";
     }

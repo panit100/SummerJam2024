@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
@@ -11,6 +12,10 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     List<Item> items = new List<Item>();
     public List<Item> Items => items;
     public List<int> startItemIds = new List<int>();
+
+    public UnityAction onMergeItem;
+
+    public bool randomGashapon = false;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -62,6 +67,8 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         if (_item != null)
         {
             //Merge
+            onMergeItem?.Invoke();
+
             var newItem = ItemManager.Instance.createItem(_item.ItemData.nextLevel, itemContainer);
 
             Vector2 tempPos = item.rect.localPosition;
@@ -106,5 +113,14 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         var item = ItemManager.Instance.createItem(itemID, itemContainer);
         item.SetPosition(GetRandomPositionInStorage());
         StoreItem(item);
+    }
+
+    public void RandomItem()
+    {
+        if (!randomGashapon)
+            return;
+        var item = Random.Range(0, 18);
+        AddItemToStorage(item);
+        randomGashapon = false;
     }
 }

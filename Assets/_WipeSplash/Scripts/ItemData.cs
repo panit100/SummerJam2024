@@ -22,7 +22,7 @@ public struct ItemData
     public int minDamage;
     public int maxDamage;
     public int block;
-    public int regenHp;
+    public float regenHp;
     public float regenStamina;
     public float staminaCost;
     public float cooldown;
