@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 using System;
+using DG.Tweening;
 
 public class PlayerPanel : MonoBehaviour
 {
@@ -23,10 +24,13 @@ public class PlayerPanel : MonoBehaviour
     public Image staminaBar;
     public TMP_Text staminaText;
 
-    [Header("Player")]
+    [Header("Character Image")]
     [SerializeField] private Image playerImage;
-    [SerializeField] private Sprite defaultSprite;
-    [SerializeField] private Sprite hurtSprite;
+    [SerializeField] protected Sprite defaultSprite;
+    [SerializeField] protected Sprite hurtSprite;
+    [SerializeField] private float bounceValue;
+    [SerializeField] private Image splashImage;
+    private Vector3 startPosition;
 
     [Header("System")]
     public InventoryPanel inventory;
@@ -40,6 +44,18 @@ public class PlayerPanel : MonoBehaviour
 
     public UnityAction onTakeDamage;
     public UnityAction<PlayerPanel> onDie;
+
+    void Start()
+    {
+        BouncePositionSetup();
+        splashImage.color = new Color(1, 1, 1, 0);
+
+        SetupAdditional();
+    }
+    protected virtual void SetupAdditional()
+    {
+
+    }
 
     private void Update()
     {
@@ -127,6 +143,8 @@ public class PlayerPanel : MonoBehaviour
         }
 
         currentHp -= damage;
+
+        DamageAnimationSequence();
         UpdateStat();
         if (currentHp <= 0)
         {
@@ -137,9 +155,25 @@ public class PlayerPanel : MonoBehaviour
         }
     }
 
+    void BouncePositionSetup()
+    {
+        startPosition = playerImage.rectTransform.localPosition;
+    }
     void DamageAnimationSequence()
     {
-        
+        playerImage.rectTransform.DOKill();
+        splashImage.DOKill();
+
+        playerImage.sprite = hurtSprite;
+        splashImage.color = new Color(1, 1, 1, 1);
+
+        playerImage.rectTransform.localPosition = startPosition + (Vector3.left * bounceValue);
+        playerImage.rectTransform.DOLocalMove(startPosition, .5f).OnComplete(() => CompleteBounce());
+        splashImage.DOFade(0, .5f).SetEase(Ease.InBounce);
+    }
+    void CompleteBounce()
+    {
+        playerImage.sprite = defaultSprite;
     }
 
     void OnDie()
