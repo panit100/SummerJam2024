@@ -45,7 +45,13 @@ public class GameManager : Singleton<GameManager>
         enemyPanel.onDie += OnDie;
 
         OnChangeState(GAMESTATE.INVENTORY);
-        SoundManager.Instance.PlaySFX("SFX_UI_Hover");
+
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            SoundManager.Instance.PlaySFX("SFX_UI_Hover");
 
     }
 
