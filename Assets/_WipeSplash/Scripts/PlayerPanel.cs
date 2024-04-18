@@ -23,6 +23,12 @@ public class PlayerPanel : MonoBehaviour
     public Image staminaBar;
     public TMP_Text staminaText;
 
+    [Header("Player")]
+    [SerializeField] private Image playerImage;
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite hurtSprite;
+
+    [Header("System")]
     public InventoryPanel inventory;
     public PlayerPanel enemy;
 
@@ -129,6 +135,11 @@ public class PlayerPanel : MonoBehaviour
             OnDie();
             return;
         }
+    }
+
+    void DamageAnimationSequence()
+    {
+        
     }
 
     void OnDie()
