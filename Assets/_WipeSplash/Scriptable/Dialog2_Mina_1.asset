@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog2_Mina_1
   m_EditorClassIdentifier: 
+  nextState: 1
   backgroundSprite: {fileID: 21300000, guid: 86d54a805379b8947b19b54647568893, type: 3}
   dialogList:
   - speakername: ' '
     dialog: It took not so long for the train to reach the next station.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -26,7 +26,6 @@ MonoBehaviour:
       the biggest entertainment district of the city.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -34,21 +33,18 @@ MonoBehaviour:
       last day on earth is shining above my head."
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: I hate Summer.
     speakerSprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: But I love it.
     speakerSprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -56,84 +52,72 @@ MonoBehaviour:
       voice owner.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: "W-w-wait up! Don\u2019t shoot!"
     speakerSprite: {fileID: 21300000, guid: 03f27c83e9579884097c5870f78dcf88, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: I was greeting you!
     speakerSprite: {fileID: 21300000, guid: 03f27c83e9579884097c5870f78dcf88, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: The voice owner was the girl with blonde hair.
     speakerSprite: {fileID: 21300000, guid: 03f27c83e9579884097c5870f78dcf88, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: The voice owner was the girl with blonde hair.
     speakerSprite: {fileID: 21300000, guid: 03f27c83e9579884097c5870f78dcf88, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "You\u2019ve been kidnapped here?"
     speakerSprite: {fileID: 21300000, guid: 03f27c83e9579884097c5870f78dcf88, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: "I think so\u2026"
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "I was sleeping last night, and now I\u2019m here."
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: You too?
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Uh-huh.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Oh, the name is James, by the way.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: My name is Mina. Nice to meet you.
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -141,14 +125,12 @@ MonoBehaviour:
       to me.
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: You know, this is very weird.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
@@ -156,77 +138,66 @@ MonoBehaviour:
       a game show held by the billionaires.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: You mean Jellyfish Game?
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: Mm-hmp.
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: That movie sucks.
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: The Yellow Attorney deserves the awards more than that child show.
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: Hehe, I agree. I watched the prequel too and it was amazing.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "But c\u2019mon! All of them are fun!"
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "Seems like she\u2019s a TV show lover."
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: " Okay, let\u2019s get back on track."
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "Oh, right. I\u2019m floating away when talking about my favorite stuff."
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: You heard the rules from the staff, right?
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
@@ -234,14 +205,12 @@ MonoBehaviour:
       second page.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: Let me clearify it for you.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
@@ -249,69 +218,59 @@ MonoBehaviour:
       to fight one-on-one in a specific area shown on your watch."
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: Mina showed her the watch on her left wrist. I looked down at mine.
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 0, g: 0.9676068, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "Huh\u2026"
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "It didn\u2019t say that we would be dead or lose a penalty."
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "So let\u2019s have fun. Keep the show topic for later."
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "No matter what, I\u2019ll do my best!"
     speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Mina
     dialog: "No matter what, I\u2019ll do my best!"
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "Ready your guns\u2026"
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: "The only thing I know for real is\u2026\r"
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 0, g: 1, b: 0.9607844, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: "There will be only one winner\u2026"
     speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
     color: {r: 0, g: 1, b: 0.9607844, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0

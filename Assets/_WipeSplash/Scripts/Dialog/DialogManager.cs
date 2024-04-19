@@ -5,7 +5,6 @@ using UnityEngine.Events;
 using TMPro;
 using DG.Tweening;
 using System.Collections.Generic;
-using UnityEngine.TextCore.Text;
 
 public class DialogManager : Singleton<DialogManager>
 {
@@ -56,8 +55,8 @@ private void Start()
         SetupButton();
         ChangeDialogState(DialogState.disabled);
 
-        // run on start
-       // StartDialogInteraction();
+        // REMOVE AFTER TEST: test run on start
+       StartDialogInteraction();
     }
     private void SetupCanvas()
     {
@@ -249,9 +248,18 @@ private void Start()
     }
     private void CompleteStopDialogInteraction()
     {
-        LoadingManager.Instance.OnLoadingComplete +=() => dialogCanvas.SetActive(false);
-        LoadingManager.Instance.OnLoadingComplete += () => GameManager.Instance.OnChangeState(GAMESTATE.INVENTORY);
-        LoadingManager.Instance.DoLoading();
+        dialogSetCount++;
+
+        if(dialogSet.nextState == Dialog.NextState.DIALOG)
+        {
+            StartDialogInteraction();
+        }
+        else if(dialogSet.nextState == Dialog.NextState.BATTLE)
+        {
+            LoadingManager.Instance.OnLoadingComplete +=() => dialogCanvas.SetActive(false);
+            LoadingManager.Instance.OnLoadingComplete += () => GameManager.Instance.OnChangeState(GAMESTATE.INVENTORY);
+            LoadingManager.Instance.DoLoading();
+        }
     }
 
 #endregion
