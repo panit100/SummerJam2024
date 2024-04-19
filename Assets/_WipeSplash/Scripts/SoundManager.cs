@@ -50,7 +50,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
     public void PlaySFX(string fileName, bool isLoop = default(bool))
     {
         AudioClip c = soundDatas.allSFX.Find(clip => clip.name == fileName);
-        AudioSource audioSourceTemp = sfxAudios.Find(audio => audio.isPlaying && audio.clip.name == fileName);
+        var audioSourceTemp = sfxAudios.FindAll(audio => audio.isPlaying && audio.clip.name == fileName);
         AudioSource audioSource = sfxAudios.Find(audio => audio.isPlaying == false);
         if (!audioSource)
         {
@@ -58,7 +58,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
             AudioSource auido = obj.GetComponent<AudioSource>();
             obj.transform.SetParent(this.gameObject.transform);
         }
-        if(audioSourceTemp) return;
+        if(audioSourceTemp.Count >3) return;
         audioSource.volume = sfxAudioVolume;
         audioSource.loop = isLoop;
         audioSource.clip = c;
@@ -106,6 +106,11 @@ public class SoundManager : PersistentSingleton<SoundManager>
         {
             obj.GetComponent<Button>().onClick.AddListener(delegate { PlaySFX("button_cute_04"); });
         }
+    }
+
+    public void LogoKeyframe()
+    {
+        PlaySFX("");
     }
 
     void OnApplicationQuit()
