@@ -6430,6 +6430,7 @@ GameObject:
   - component: {fileID: 4452592191738272425}
   - component: {fileID: 8533562353662146172}
   - component: {fileID: 2145115753427604458}
+  - component: {fileID: 3555528915203011304}
   m_Layer: 5
   m_Name: Credit
   m_TagString: Untagged
@@ -6522,6 +6523,18 @@ MonoBehaviour:
   m_PartOfParent: 0
   m_IgnoreSelfGraphic: 0
   m_IgnoreSelfStencil: 0
+--- !u!225 &3555528915203011304
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183844432262209968}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7437869572851234315
 GameObject:
   m_ObjectHideFlags: 0
