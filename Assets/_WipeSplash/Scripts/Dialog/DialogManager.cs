@@ -133,7 +133,7 @@ public class DialogManager : MonoBehaviour
         foreach(char character in charArray)
         {
             dialogText.text += character; 
-            yield return new WaitForSeconds(dialogSet.dialogList[dialogCount].interval);
+            yield return new WaitForSeconds(0.05f);
         }
 
         CompleteDialogSequence();
