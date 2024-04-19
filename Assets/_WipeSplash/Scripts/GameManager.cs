@@ -42,23 +42,18 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    private void Start()
+    void OnEnable()
     {
         playerPanel.onDie += OnDie;
         enemyPanel.onDie += OnDie;
 
-        OnChangeState(GAMESTATE.INVENTORY);
-
+     //   OnChangeState(GAMESTATE.INVENTORY);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            SoundManager.Instance.PlaySFX("SFX_UI_Hover");
 
-    }
 
-    void OnChangeState(GAMESTATE state)
+
+    public void OnChangeState(GAMESTATE state)
     {
         gameState = state;
         switch (gameState)
@@ -67,7 +62,7 @@ public class GameManager : Singleton<GameManager>
                 loseText.gameObject.SetActive(false);
                 winText.gameObject.SetActive(false);
                 endButton.gameObject.SetActive(false);
-
+                SoundManager.Instance.ChangeBGM("PreparationPhrase");
                 foreach (var n in StoragePanel.Instance.Items)
                 {
                     n.ResetItem();
@@ -79,6 +74,7 @@ public class GameManager : Singleton<GameManager>
                 fightStatePanel.anchoredPosition = new Vector2(-1920, 0);
                 break;
             case GAMESTATE.SETUPBATTLE:
+                SoundManager.Instance.ChangeBGM("Battle_PaShed");
                 fightStatePanel.localPosition = new Vector2(0, 0);
                 fightStatePanel.anchoredPosition = new Vector2(0, 0);
                 inventoryStatePanel.localPosition = new Vector2(1920, 0);

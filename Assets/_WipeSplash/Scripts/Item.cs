@@ -108,6 +108,18 @@ public class Item : MonoBehaviour, IPointerClickHandler
         cooldownTime += Time.deltaTime;
         if (cooldownTime >= itemData.cooldown)
         {
+            var rand = Random.Range(0, 2);
+            switch (rand)
+            {
+                case 0:
+                    SoundManager.Instance.PlaySFX("magic_01");
+                    break;
+                case 1 :
+                    SoundManager.Instance.PlaySFX("magic_02");
+                    break;
+                default:
+                    break;
+            }
             onUseItem?.Invoke(this);
         }
         UpdateCooldown();

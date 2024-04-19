@@ -11,9 +11,10 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] LoadingManager loadingMAG;
     [SerializeField] GraphicRaycaster subcanvasRaycaster;
     GameObject subcanvasOBJ;
+    const string BGMmainmenu = "MainMenu_RuDooRon";
     void Start()
     {
-        
+        SoundManager.Instance.ChangeBGM(BGMmainmenu);
         subcanvasOBJ = subcanvas.gameObject;
         startButton.onClick.AddListener(ClickToGame);
         creditButton.onClick.AddListener(delegate{});
@@ -23,6 +24,7 @@ public class MainMenuManager : MonoBehaviour
     {
         loadingMAG.OnLoadingComplete += () => ToggleMainMenu(false);
         subcanvasRaycaster.enabled = false;
+        GameManager.Instance.OnChangeState(GAMESTATE.INVENTORY);
         loadingMAG.DoLoading();
     }
 
