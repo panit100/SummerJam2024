@@ -93,9 +93,9 @@ private void Start()
         ChangeDialogState(DialogState.ready);
         dialogCanvas.SetActive(true);
         backgroundImage.sprite = dialogSetList[dialogSetCount].backgroundSprite;
+        SoundManager.Instance.ChangeBGM(dialogSet.bgmName);
 
         Sequence StartSequence = DOTween.Sequence();
-
         
         StartSequence.Append(transitionImage.DOFade(0, 2.5f));
         

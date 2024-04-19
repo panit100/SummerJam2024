@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextState: 0
   backgroundSprite: {fileID: 21300000, guid: 2bf856865b365dc45bbae9c3b80c562a, type: 3}
+  bgmName: Dialog - Pob Gun Mai - POLYCAT
   dialogList:
   - speakername: ' '
     dialog: "Where am I\u2026?"

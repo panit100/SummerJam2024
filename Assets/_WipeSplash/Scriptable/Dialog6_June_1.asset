@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextState: 1
   backgroundSprite: {fileID: 21300000, guid: 5ff3fa25ffc28ac449744c6fd989c401, type: 3}
+  bgmName: Dialog - Yin Dee Tee Mai Ru Jak - 25hours
   dialogList:
   - speakername: 
     dialog: I arrived at the large landmark, surrounded by many stores and restaurants.
