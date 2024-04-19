@@ -28,6 +28,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Image backgroundImage;
 
     [Header("UI")] 
+ 
     public Canvas GameCanvas;
     public Canvas DialogueCanvas;
     public RectTransform inventoryStatePanel;
@@ -35,6 +36,7 @@ public class GameManager : Singleton<GameManager>
     public TMP_Text winText;
     public TMP_Text loseText;
     public Button endButton;
+    public Button buttonBattle;
 
     public int currentEnemy = 0;
 
@@ -49,8 +51,7 @@ public class GameManager : Singleton<GameManager>
     {
         playerPanel.onDie += OnDie;
         enemyPanel.onDie += OnDie;
-
-     //   OnChangeState(GAMESTATE.INVENTORY);
+        OnChangeState(GAMESTATE.INVENTORY);
     }
 
 
@@ -71,6 +72,7 @@ public class GameManager : Singleton<GameManager>
                 loseText.gameObject.SetActive(false);
                 winText.gameObject.SetActive(false);
                 endButton.gameObject.SetActive(false);
+                buttonBattle.gameObject.SetActive(true);
                 SoundManager.Instance.ChangeBGM("PreparationPhrase");
                 foreach (var n in StoragePanel.Instance.Items)
                 {
@@ -108,6 +110,7 @@ public class GameManager : Singleton<GameManager>
     public void OnStartBattle()
     {
         OnChangeState(GAMESTATE.BATTLE);
+        buttonBattle.gameObject.SetActive(false);
     }
     public void OnEndBattle()
     {
