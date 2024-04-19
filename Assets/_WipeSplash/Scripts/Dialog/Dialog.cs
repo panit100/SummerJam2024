@@ -6,7 +6,7 @@ public class Dialog : ScriptableObject
 {
     public enum NextState
     {
-        DIALOG, BATTLE
+        DIALOG, BATTLE, ENDGAME
     }
     [SerializeField] public NextState nextState;
     [SerializeField] public Sprite backgroundSprite;

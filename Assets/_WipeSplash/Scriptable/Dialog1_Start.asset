@@ -12,34 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog1_Start
   m_EditorClassIdentifier: 
+  nextState: 0
   backgroundSprite: {fileID: 21300000, guid: 2bf856865b365dc45bbae9c3b80c562a, type: 3}
   dialogList:
   - speakername: ' '
     dialog: "Where am I\u2026?"
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.8583369, a: 1}
-    interval: 0.5
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: This place is very similar to the city where I live.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: Hello mister.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Huh?
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -47,7 +44,6 @@ MonoBehaviour:
       feet.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -55,14 +51,12 @@ MonoBehaviour:
       wears.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: ....
     speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
@@ -70,63 +64,54 @@ MonoBehaviour:
       like in a good mood.
     speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: Mr.James, right?
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "Uh\u2026 Yeah, that\u2019s me. But where am I? What just happened?"
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: You have been chosen to participate in the Water Festival Competition.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: '?'
     dialog: Oh my apologies, I forgot to introduce myself and my college.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: " I\u2019m Tiwa and this is Ratri."
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Ratri
     dialog: ....
     speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Come on Ratri! S-Say something to our competitor.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Ratri
     dialog: ....
     speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
@@ -134,63 +119,54 @@ MonoBehaviour:
       to our jobs."
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "What the heck? It\u2019s this some kind of a gameshow on MyTube?"
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: "No, um\u2026, I mean, there could be a live broadcast."
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Please wait a sec...
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: Tiwa picks up the pocket staff handbook and opens it.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Ahem! The competition was held by the floating robot named...
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Ratri
     dialog: We are not allowed to say that, Tiwa.
     speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: R-right! I forgot.
     speakerSprite: {fileID: 21300000, guid: 1d1be5848fef93a4b9e16f879b870a0e, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: She flips to the next page.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
@@ -199,14 +175,12 @@ MonoBehaviour:
       item to store your health.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: The water is your weapon, no lethal weapons are allowed of course.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
@@ -214,7 +188,6 @@ MonoBehaviour:
       boss!
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
@@ -222,14 +195,12 @@ MonoBehaviour:
       they didn\u2019t give me any brief!"
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: Come on, I just want to stay at home right now.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
@@ -238,7 +209,6 @@ MonoBehaviour:
       me to play a weird creepy game."
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
@@ -246,35 +216,30 @@ MonoBehaviour:
       tea."
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Glad you understand our unfortunate circumstances.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Please board the train to your first destination.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Good luck!
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: Tiwa waves at me.
     speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
@@ -282,34 +247,29 @@ MonoBehaviour:
       in and sit down.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: I slowly close my eyes and hear some voices in the distance.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: "Wait, mister! I forgot there\u2019s a second-page rule!"
     speakerSprite: {fileID: 21300000, guid: 1d1be5848fef93a4b9e16f879b870a0e, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: Ratri
     dialog: Tiwa, you idiot.
     speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: "The train departed sliently\u2026"
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
-    interval: 0.1
     fontSize: 54
     isChangeBackground: 0

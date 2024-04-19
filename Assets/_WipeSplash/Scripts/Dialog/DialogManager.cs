@@ -233,31 +233,30 @@ private void Start()
 
     public void StopDialogInteraction()
     {
+        dialogText.text = "";
+        speakerText.text = "";
         dialogText.DOKill();
         
         Sequence EndSequence = DOTween.Sequence();
         ChangeDialogState(DialogState.disabled);
         EndSequence.Append(dialogText.DOFade(0, .5f));
-        EndSequence.JoinCallback(() => CompleteStopDialogInteraction());
         EndSequence.Join(speakerText.DOFade(0, .5f));
         EndSequence.Join(speakerImage.DOFade(0, .25f));
         EndSequence.Join(dialogOverlay.DOFade(0, 1.5f).SetEase(Ease.InQuart));
         EndSequence.Append(transitionImage.DOFade(1, 3f));
-       // EndSequence.AppendCallback(CompleteStopDialogInteraction);
+        EndSequence.AppendCallback(CompleteStopDialogInteraction);
 
         EndSequence.Play();
-      
     }
     private void CompleteStopDialogInteraction()
-    {
-        
-        dialogSetCount++;
-    
-        if(dialogSet.nextState == Dialog.NextState.DIALOG)
+    {    
+        if(dialogSet.nextState == Dialog.NextState.ENDGAME)
         {
-            
+            // SHOW END GAME PANEL
+        }
+        else if(dialogSet.nextState == Dialog.NextState.DIALOG)
+        {
             StartDialogInteraction();
-            
         }
         else if(dialogSet.nextState == Dialog.NextState.BATTLE)
         {

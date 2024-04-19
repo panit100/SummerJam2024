@@ -40,6 +40,9 @@ public class GameManager : Singleton<GameManager>
 
     public List<EnemyConfig> enemies = new List<EnemyConfig>();
 
+    [Header("System")]
+    [SerializeField] private DialogManager DialogManager;
+
     protected override void InitAfterAwake()
     {
 
@@ -116,8 +119,10 @@ public class GameManager : Singleton<GameManager>
 
         if (currentEnemy < enemies.Count)
         {
-            StoragePanel.Instance.randomGashapon = true;
-            OnChangeState(GAMESTATE.INVENTORY);
+            // StoragePanel.Instance.randomGashapon = true;
+            // OnChangeState(GAMESTATE.INVENTORY);
+            DialogManager.StartDialogInteraction();
+
         }
         else
             OnEndGame();
