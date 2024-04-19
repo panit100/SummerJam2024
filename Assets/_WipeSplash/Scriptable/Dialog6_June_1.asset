@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog6_June_1
+  m_EditorClassIdentifier: 
+  nextState: 1
+  backgroundSprite: {fileID: 21300000, guid: 5ff3fa25ffc28ac449744c6fd989c401, type: 3}
+  dialogList:
+  - speakername: 
+    dialog: I arrived at the large landmark, surrounded by many stores and restaurants.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "The price of stuff written on the menu list makes me feel sick.\r"
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "There\u2019re human-sized ice cubes scattered around the area. Even
+      cause the uncomfortable and weird atmosphere.\r"
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: From my presumption many fights must have started here.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: Wait up, where is my opponent?
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: Got you dumbass!!!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: My childhood demon hunter instinct reacts as the water bullet moving
+      at my head.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I dodge the bullet by doing the iconic back bending from the movie.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Ugh! My back!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: The pain kicked in instantly after I bent my back.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: How did I miss it?!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "I turn in the direction of the voice. There is a girl with a water rifle.
+      The size of the gun doesn\u2019t match her body."
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: She is hiding behind the tree.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: You! Yeah, you! Stop moving around!
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: She seems like a ninth-grade kid but her voice was cute.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: W-what are you looking at!?
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: Are you going to treat me like a middle school kid!?
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Nice ambush by the way.
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: Nghhh! DIE!!!
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "I don\u2019t think she\u2019s in the mood to talk."
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: "Okay\u2026 Smokin\u2019 time."
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0

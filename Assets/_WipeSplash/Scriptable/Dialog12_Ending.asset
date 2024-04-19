@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog12_Ending
+  m_EditorClassIdentifier: 
+  nextState: 1
+  backgroundSprite: {fileID: 21300000, guid: 95b128ac72dde0342a265d360a2da3c5, type: 3}
+  dialogList:
+  - speakername: 
+    dialog: After the incident last week, fortunately, there was no single casualty.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "After investigating the robot alien\u2019s data, it\u2019s actually
+      from Earth, born in the student robotic lab."
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: It starts from the dumped thesis project and develops itself from human
+      false and trolling input and learning to be a broken human.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: One day it escaped from the lab and started doing evil things. They already
+      there's no single backup data or not a single line of code of that robot left
+      on the network.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: Saved the world, I guess?
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: There are more important things to do.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Broadcaster
+    dialog: Today is the water festival day, our golden days for everyone in the
+      country.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 0.82486737, b: 0, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Broadcaster
+    dialog: Ready your water guns and splash everyone up!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 0.82486737, b: 0, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Jame
+    dialog: I'm going to touch some glass and enjoy the Water Festival.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
