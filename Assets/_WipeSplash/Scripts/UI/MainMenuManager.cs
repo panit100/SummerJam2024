@@ -23,8 +23,8 @@ public class MainMenuManager : MonoBehaviour
     void ClickToGame()
     {
         loadingMAG.OnLoadingComplete += () => ToggleMainMenu(false);
+        loadingMAG.OnLoadingComplete += () => GameManager.Instance.OnChangeState(GAMESTATE.DIALOG);
         subcanvasRaycaster.enabled = false;
-        GameManager.Instance.OnChangeState(GAMESTATE.INVENTORY);
         loadingMAG.DoLoading();
     }
 

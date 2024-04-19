@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public enum GAMESTATE
 {
+    DIALOG,
     INVENTORY,
     SETUPBATTLE,
     BATTLE,
@@ -26,7 +27,9 @@ public class GameManager : Singleton<GameManager>
     [Header("Background")]
     [SerializeField] private Image backgroundImage;
 
-    [Header("UI")]
+    [Header("UI")] 
+    public Canvas GameCanvas;
+    public Canvas DialogueCanvas;
     public RectTransform inventoryStatePanel;
     public RectTransform fightStatePanel;
     public TMP_Text winText;
@@ -58,7 +61,13 @@ public class GameManager : Singleton<GameManager>
         gameState = state;
         switch (gameState)
         {
+            case GAMESTATE.DIALOG:
+                GameCanvas.enabled = false;
+                DialogueCanvas.enabled = true;
+                DialogManager.Instance.StartDialogInteraction();
+                break;
             case GAMESTATE.INVENTORY:
+                GameCanvas.enabled = true;
                 loseText.gameObject.SetActive(false);
                 winText.gameObject.SetActive(false);
                 endButton.gameObject.SetActive(false);
