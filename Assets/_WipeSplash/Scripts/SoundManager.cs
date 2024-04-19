@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,10 +38,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
         // sfxAudioVolume = PlayerPrefs.GetFloat("sfxVolume");
     }
 
-    void Start()
-    {
-
-    }
+ 
 
     public void ChangeBGM(string fileName)
     {
@@ -52,6 +50,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
     public void PlaySFX(string fileName, bool isLoop = default(bool))
     {
         AudioClip c = soundDatas.allSFX.Find(clip => clip.name == fileName);
+        AudioSource audioSourceTemp = sfxAudios.Find(audio => audio.isPlaying && audio.clip.name == fileName);
         AudioSource audioSource = sfxAudios.Find(audio => audio.isPlaying == false);
         if (!audioSource)
         {
@@ -59,7 +58,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
             AudioSource auido = obj.GetComponent<AudioSource>();
             obj.transform.SetParent(this.gameObject.transform);
         }
-
+        if(audioSourceTemp) return;
         audioSource.volume = sfxAudioVolume;
         audioSource.loop = isLoop;
         audioSource.clip = c;
@@ -68,7 +67,15 @@ public class SoundManager : PersistentSingleton<SoundManager>
 
     public void StopSFXLoop(string fileName)
     {
-        AudioSource audioSource = sfxAudios.Find(audio => audio.clip.name == fileName && audio.loop == true);
+        AudioSource audioSource = null;
+        try
+        {
+            audioSource = sfxAudios.Find(audio => audio != null && audio.clip != null && audio.clip.name == fileName && audio.loop == true);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Failed to find the audio source: " + e.Message);
+        }
         if (audioSource)
         {
             audioSource.clip = null;

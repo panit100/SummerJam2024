@@ -6,6 +6,8 @@ using TMPro;
 using UnityEngine.Events;
 using System;
 using DG.Tweening;
+using Unity.Mathematics;
+using Random = UnityEngine.Random;
 
 public class PlayerPanel : MonoBehaviour
 {
@@ -30,6 +32,8 @@ public class PlayerPanel : MonoBehaviour
     [SerializeField] protected Sprite hurtSprite;
     [SerializeField] private float bounceValue;
     [SerializeField] private Image splashImage;
+    [SerializeField] private Image impactImage;
+    [SerializeField] ParticleSystem playerEffect;
     private Vector3 startPosition;
 
     [Header("System")]
@@ -128,6 +132,18 @@ public class PlayerPanel : MonoBehaviour
     public void OnTakeDamage(int damage)
     {
         onTakeDamage?.Invoke();
+        var rand = Random.Range(0, 2);
+        switch (rand)
+        {
+            case 0:
+                SoundManager.Instance.PlaySFX("card");
+                break;
+            case 1 :
+                SoundManager.Instance.PlaySFX("crossbow");
+                break;
+            default:
+                break;
+        }
         if (currentBlock > 0)
         {
             currentBlock -= damage;
@@ -163,13 +179,18 @@ public class PlayerPanel : MonoBehaviour
     {
         playerImage.rectTransform.DOKill();
         splashImage.DOKill();
+        impactImage.DOKill();
+        playerEffect.Clear();
 
         playerImage.sprite = hurtSprite;
         splashImage.color = new Color(1, 1, 1, 1);
-
+        impactImage.color =new Color(1, 1, 1, 1);
+        splashImage.rectTransform.rotation = quaternion.Euler(new float3(0, 0, Random.Range(0, 360)));
+        playerEffect.Play();
         playerImage.rectTransform.localPosition = startPosition + (Vector3.left * bounceValue);
         playerImage.rectTransform.DOLocalMove(startPosition, .5f).OnComplete(() => CompleteBounce());
         splashImage.DOFade(0, .5f).SetEase(Ease.InBounce);
+        impactImage.DOFade(0, .15f).SetEase(Ease.Flash);
     }
     void CompleteBounce()
     {

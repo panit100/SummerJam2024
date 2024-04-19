@@ -7,7 +7,7 @@ using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine.TextCore.Text;
 
-public class DialogManager : MonoBehaviour
+public class DialogManager : Singleton<DialogManager>
 {
 
     [Header("Canvas")]
@@ -45,14 +45,19 @@ public class DialogManager : MonoBehaviour
 
 #region setup functions
 
-    private void Start()
+protected override void InitAfterAwake()
+{
+    
+}
+
+private void Start()
     {
         SetupCanvas();
         SetupButton();
         ChangeDialogState(DialogState.disabled);
 
         // run on start
-        StartDialogInteraction();
+       // StartDialogInteraction();
     }
     private void SetupCanvas()
     {
@@ -244,8 +249,9 @@ public class DialogManager : MonoBehaviour
     }
     private void CompleteStopDialogInteraction()
     {
-        dialogCanvas.SetActive(false);
-        // TODO: Complete dialog event
+        LoadingManager.Instance.OnLoadingComplete +=() => dialogCanvas.SetActive(false);
+        LoadingManager.Instance.OnLoadingComplete += () => GameManager.Instance.OnChangeState(GAMESTATE.INVENTORY);
+        LoadingManager.Instance.DoLoading();
     }
 
 #endregion

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public enum GAMESTATE
 {
+    DIALOG,
     INVENTORY,
     SETUPBATTLE,
     BATTLE,
@@ -26,7 +27,9 @@ public class GameManager : Singleton<GameManager>
     [Header("Background")]
     [SerializeField] private Image backgroundImage;
 
-    [Header("UI")]
+    [Header("UI")] 
+    public Canvas GameCanvas;
+    public Canvas DialogueCanvas;
     public RectTransform inventoryStatePanel;
     public RectTransform fightStatePanel;
     public TMP_Text winText;
@@ -42,32 +45,33 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    private void Start()
+    void OnEnable()
     {
         playerPanel.onDie += OnDie;
         enemyPanel.onDie += OnDie;
 
-        OnChangeState(GAMESTATE.INVENTORY);
-
+     //   OnChangeState(GAMESTATE.INVENTORY);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            SoundManager.Instance.PlaySFX("SFX_UI_Hover");
 
-    }
 
-    void OnChangeState(GAMESTATE state)
+
+    public void OnChangeState(GAMESTATE state)
     {
         gameState = state;
         switch (gameState)
         {
+            case GAMESTATE.DIALOG:
+                GameCanvas.enabled = false;
+                DialogueCanvas.enabled = true;
+                DialogManager.Instance.StartDialogInteraction();
+                break;
             case GAMESTATE.INVENTORY:
+                GameCanvas.enabled = true;
                 loseText.gameObject.SetActive(false);
                 winText.gameObject.SetActive(false);
                 endButton.gameObject.SetActive(false);
-
+                SoundManager.Instance.ChangeBGM("PreparationPhrase");
                 foreach (var n in StoragePanel.Instance.Items)
                 {
                     n.ResetItem();
@@ -79,6 +83,7 @@ public class GameManager : Singleton<GameManager>
                 fightStatePanel.anchoredPosition = new Vector2(-1920, 0);
                 break;
             case GAMESTATE.SETUPBATTLE:
+                SoundManager.Instance.ChangeBGM("Battle_PaShed");
                 fightStatePanel.localPosition = new Vector2(0, 0);
                 fightStatePanel.anchoredPosition = new Vector2(0, 0);
                 inventoryStatePanel.localPosition = new Vector2(1920, 0);

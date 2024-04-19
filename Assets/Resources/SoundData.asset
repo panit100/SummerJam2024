@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8286e63ecfafae542ac0e064c8be8616, type: 3}
   m_Name: SoundData
   m_EditorClassIdentifier: 
-  allBGM: []
+  allBGM:
+  - {fileID: 8300000, guid: cd46d81935c30324dbd03a66885995dc, type: 3}
+  - {fileID: 8300000, guid: e70ca4fd0e7f9bc4b96af60527c35fc8, type: 3}
+  - {fileID: 8300000, guid: 8fddbd56feddf1f4389464337317fa1e, type: 3}
   allSFX:
   - {fileID: 8300000, guid: a7a3be8634a8b7b4f82327bd1b9ca09b, type: 3}
+  - {fileID: 8300000, guid: 82f1d50e4b8661a4a8bf79597524da94, type: 3}
+  - {fileID: 8300000, guid: 7f2a6fcff8a01a34180af1d03b46b38d, type: 3}
+  - {fileID: 8300000, guid: a58e438b7cfa445498120af0e6169082, type: 3}
+  - {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
+  - {fileID: 8300000, guid: b1b9c1f0ea1fcae439ed1a4d44ff05fd, type: 3}
+  - {fileID: 8300000, guid: 78419f98379502c4dbfb2774bc94e7c1, type: 3}
   audioMixers:
   - {fileID: 24300002, guid: 12778df04842ccb409d8e70282c0f311, type: 2}

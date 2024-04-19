@@ -6,8 +6,9 @@ using Plugins.Animate_UI_Materials;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class LoadingManager : MonoBehaviour
+public class LoadingManager : Singleton<LoadingManager>
 {
+    
     [SerializeField] GraphicPropertyOverrideRange loadingBar;
      float targetValue = 1f; 
      float duration = 2f; 
@@ -15,7 +16,10 @@ public class LoadingManager : MonoBehaviour
 
      public UnityAction OnLoadingComplete;
 
-   
+     protected override void InitAfterAwake()
+     {
+       
+     }
 
      public void DoLoading()
     {
