@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
     [Serializable]
     public class Data
     {
+        [Title("")]
         [SerializeField] public string speakername = "Speaker Name";
         [SerializeField, TextArea(4, 10)] public string dialog = "Speaker is speaking.";
         [SerializeField] public Sprite speakerSprite;

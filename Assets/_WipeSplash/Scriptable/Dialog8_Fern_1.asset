@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog8_Fern_1
+  m_EditorClassIdentifier: 
+  nextState: 1
+  backgroundSprite: {fileID: 21300000, guid: f9344de538e19db43b085e093b425ff2, type: 3}
+  dialogList:
+  - speakername: 
+    dialog: I arrived at the place. In normal circumstances, this place would be
+      crowded with cars and people.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: It says that this is the last fight.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I saw a girl walking towards me from the building entrance.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: You are the last player, right?
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "Name\u2019s James."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: You must be good enough to win all the fights.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: No, I was lucky.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: "I bet you\u2019re a nice guy. Your eyes tell me that."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: ..
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: You know what to do, yeah?
+    speakerSprite: {fileID: 21300000, guid: efcace9115301c74581b3a25cf8d49c5, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Yeah.
+    speakerSprite: {fileID: 21300000, guid: efcace9115301c74581b3a25cf8d49c5, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: Fern and I are both ready our guns.
+    speakerSprite: {fileID: 21300000, guid: efcace9115301c74581b3a25cf8d49c5, type: 3}
+    color: {r: 0, g: 1, b: 0.8653741, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "Let\u2019s rock."
+    speakerSprite: {fileID: 21300000, guid: efcace9115301c74581b3a25cf8d49c5, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
