@@ -10,5 +10,6 @@ public class Dialog : ScriptableObject
     }
     [SerializeField] public NextState nextState;
     [SerializeField] public Sprite backgroundSprite;
+    [SerializeField] public string bgmName;
     [SerializeField] public List<Data> dialogList;
 }
