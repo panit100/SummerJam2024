@@ -278,6 +278,11 @@ public class InventoryPanel : MonoBehaviour
             Destroy(item.gameObject);
         }
 
+        foreach (var grid in grids)
+        {
+            grid.ChangeGridSprite(GridStatus.NORMAL);
+        }
+
         items.Clear();
     }
 
