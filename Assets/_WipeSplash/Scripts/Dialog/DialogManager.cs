@@ -16,6 +16,9 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private TMP_Text speakerText;
     [SerializeField] private TMP_Text dialogText;
 
+    [Header("Dialog Button Animation")]
+    [SerializeField] private Animator dialogButtonAnimator;
+
     [Header("Image")]
     [SerializeField] private Image speakerImage;
     [SerializeField] private Image dialogOverlay;
@@ -80,6 +83,7 @@ private void Start()
     {
         dialogButton.onClick.AddListener(NextDialog);
         dialogButton.gameObject.SetActive(false);
+        dialogButtonAnimator.gameObject.SetActive(false);
     }
 
 #endregion
@@ -115,11 +119,13 @@ private void Start()
     private void CreateDialog()
     {
         dialogButton.gameObject.SetActive(true);
+        dialogButtonAnimator.gameObject.SetActive(true);
         StartCoroutine("CreateDialogSequence");
     }
     private IEnumerator CreateDialogSequence()
     {
         ChangeDialogState(DialogState.progress);
+        ActiveAnimationProgress();
 
         // text setup
         speakerText.text = dialogSet.dialogList[dialogCount].speakername;
@@ -146,6 +152,7 @@ private void Start()
     {
         StopCoroutine("CreateDialogSequence");
         ChangeDialogState(DialogState.ready);
+        ActiveAnimationEnd();
     }
     #endregion
 
@@ -184,6 +191,17 @@ private void Start()
 
     #endregion
 
+    #region dialog button
+    public void ActiveAnimationProgress()
+    {
+        dialogButtonAnimator.SetBool("bool_isProgress", true);
+    }
+    public void ActiveAnimationEnd()
+    {
+        dialogButtonAnimator.SetBool("bool_isProgress", false);
+    }
+    #endregion
+
     #region next dialog button
     private void NextDialog()
     {
@@ -208,7 +226,7 @@ private void Start()
     }
     #endregion
 
-    #region check if llast dialog is played
+    #region check if last dialog is played
     private void CheckCompleteDialogInteraction()
     {
         StopDialogInteraction();
@@ -236,6 +254,7 @@ private void Start()
         dialogText.text = "";
         speakerText.text = "";
         dialogText.DOKill();
+        dialogButtonAnimator.gameObject.SetActive(false);
         
         Sequence EndSequence = DOTween.Sequence();
         ChangeDialogState(DialogState.disabled);
