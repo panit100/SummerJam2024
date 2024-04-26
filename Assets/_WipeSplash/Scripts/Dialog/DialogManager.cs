@@ -43,6 +43,9 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private int dialogSetCount;
     [SerializeField] private List<Dialog> dialogSetList;
 
+    [Header("Song Name Displayer")]
+    [SerializeField] private SongNameDisplayer SongNameDisplayer;
+
     private Dialog dialogSet;
 
 #region setup functions
@@ -94,6 +97,7 @@ private void Start()
     {
         dialogSet = dialogSetList[dialogSetCount];
         dialogCount = 0;
+        
         ChangeDialogState(DialogState.ready);
         dialogCanvas.SetActive(true);
         backgroundImage.sprite = dialogSetList[dialogSetCount].backgroundSprite;
@@ -106,6 +110,7 @@ private void Start()
         StartSequence.Append(dialogText.DOFade(1f, .5f));
         StartSequence.Join(speakerText.DOFade(1f, .5f));
         StartSequence.Join(dialogOverlay.DOFade(dialogOverlayAlpha, .25f));
+        StartSequence.AppendCallback(() => SongNameDisplayer.DisplaySongName(dialogSet.songName, dialogSet.artistName));
         StartSequence.AppendCallback(CreateDialog);
 
         StartSequence.Play();
