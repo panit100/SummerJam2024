@@ -5834,6 +5834,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &348096653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8177516332574051424, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
+  m_PrefabInstance: {fileID: 1064043722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &385380941 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7075289358315271670, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
@@ -13524,10 +13535,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4903732341026190913, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.a
-      value: 0.42745098
-      objectReference: {fileID: 0}
     - target: {fileID: 5588843771616723141, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13617,6 +13624,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
+--- !u!114 &1064043723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4064428763814915476, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
+  m_PrefabInstance: {fileID: 1064043722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &1064043724 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 6012732114927146959, guid: 244f27271de8e424ba2f4ceaad367aba, type: 3}
+  m_PrefabInstance: {fileID: 1064043722}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078717079
 GameObject:
   m_ObjectHideFlags: 0
@@ -16331,6 +16354,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 137311118}
     - target: {fileID: 3810319460151055880, guid: d6984b9bd09aa0540a86015c29c7ab3c, type: 3}
+      propertyPath: dialogGroup
+      value: 
+      objectReference: {fileID: 1064043724}
+    - target: {fileID: 3810319460151055880, guid: d6984b9bd09aa0540a86015c29c7ab3c, type: 3}
       propertyPath: speakerText
       value: 
       objectReference: {fileID: 300131394}
@@ -16366,6 +16393,14 @@ PrefabInstance:
       propertyPath: dialogButtonAnimator
       value: 
       objectReference: {fileID: 722751705}
+    - target: {fileID: 3810319460151055880, guid: d6984b9bd09aa0540a86015c29c7ab3c, type: 3}
+      propertyPath: hideBackgroundButton
+      value: 
+      objectReference: {fileID: 1064043723}
+    - target: {fileID: 3810319460151055880, guid: d6984b9bd09aa0540a86015c29c7ab3c, type: 3}
+      propertyPath: showBackgroundButton
+      value: 
+      objectReference: {fileID: 348096653}
     - target: {fileID: 3810319460151055880, guid: d6984b9bd09aa0540a86015c29c7ab3c, type: 3}
       propertyPath: dialogSetList.Array.size
       value: 7
