@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog10_Robot_1
   m_EditorClassIdentifier: 
-  nextState: 1
+  nextState: 0
   backgroundSprite: {fileID: 21300000, guid: e1828e003bae6f74192427b97a4ba8da, type: 3}
   bgmName: Dialog Boss - Tum Dee Mai Kei Jam - COCKTAIL
   songName: Tum Dee Mai Kei Jam (Bad Habit)
@@ -106,7 +106,7 @@ MonoBehaviour:
     fontSize: 54
     isChangeBackground: 0
   - speakername: Weird-Ass Robot
-    dialog: T-t-t-his is not m-m-my script.
+    dialog: T-t-t-his is not in m-m-my script.
     speakerSprite: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54

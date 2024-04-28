@@ -1,0 +1,190 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog3_Mina_2
+  m_EditorClassIdentifier: 
+  nextState: 0
+  backgroundSprite: {fileID: 21300000, guid: 86d54a805379b8947b19b54647568893, type: 3}
+  bgmName: Dialog - Ter Yang - Potato
+  songName: Ter Yang (Remember)
+  artistName: Potato
+  dialogList:
+  - speakername: Mina
+    dialog: I think I lose.
+    speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "\u2026"
+    speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: ' '
+    dialog: What will happen to her?
+    speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
+    color: {r: 0, g: 1, b: 0.85882354, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Are you going to be alright?
+    speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: "Y-yeah\u2026"
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: "I feel\u2026 a bit cold\u2026"
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Announcer
+    dialog: Please step away from a losing competitor.
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 0.62151104, b: 0, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: What!?
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: "Don\u2019t worry\u2026 just listen to me\u2026"
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Okay...
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: I was born in March, so my mom named me Mina.
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: It was a cute name right?
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Yeah.
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: "That\u2019s why I love summer. It\u2019s my birth season."
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: And thinking of Summer. I can only think of the sea.
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: Do you like it?
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Sure, I do
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: After this is over, can we go to the sea together?
+    speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Let me think about it.
+    speakerSprite: {fileID: 21300000, guid: 3c256d9e903c03d41a027ee5ee82ffec, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: Just answer me after you are the champion, okay?
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: "I feel\u2026 sleepy\u2026"
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: "\u2026"
+    speakerSprite: {fileID: 21300000, guid: 48d84ed89c8a6324695d656f2c7d92bb, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "Suddenly, the strange light blue cube appears under her feet slowly
+      consuming Mina\u2019s entire body and freezing her inside\u2026"
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.85882354, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Announcer
+    dialog: You have been qualified to next round.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 0.5566945, b: 0, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Announcer
+    dialog: "Shit, I hope she\u2019s alright inside that ice cube."
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.85882354, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Announcer
+    dialog: She better be.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.85882354, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "I\u2019ll win this stupid game."
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "I hurried to the next destination, leaving Mina frozen at the center
+      of the area\u2026"
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.85882354, a: 1}
+    fontSize: 54
+    isChangeBackground: 0

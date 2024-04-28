@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog9_Fern_2
+  m_EditorClassIdentifier: 
+  nextState: 0
+  backgroundSprite: {fileID: 21300000, guid: f9344de538e19db43b085e093b425ff2, type: 3}
+  bgmName: Dialog - Phop Phan - COCKTAIL
+  songName: Phob Pan (Wish)
+  artistName: Cocktail
+  dialogList:
+  - speakername: Fern
+    dialog: "Hmp\u2026 I lose."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: That was fun by the way.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Agreed.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "Hey, what\u2019s wrong?"
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: Oh, you know?
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Yeah, anyone can tell.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: Have you ever felt overwhelmed by everything?
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: It feels like you can be crushed by the entire world anytime.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: I feel sad, alone and desperated.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: ' I only need someone, just person to say what I exactly want to hear.'
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: So, I can get up on my feet.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: I used to be in your position. I get what you said.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Keep it in mind that you life has a long way to go.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "For the passed years taught me many things. There\u2019s one quote that
+      keeps me moving on."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "\u201CHappiness won\u2019t come to us if we don\u2019t fight for it.\u201D"
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: 'Keep fighting until that day you can find someone who can share your
+      thoughts and passion. '
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: And they will be your greatest companion who can walk alongside you until
+      you can reach your dream.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "So, let\u2019s keep fighting together, Fern."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: "\u2026"
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: "That just\u2026 wow\u2026"
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: "You are the most impressive person I\u2019ve ever met.."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: Thank you, James, really.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: I feel like I smash the entire world!
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "That\u2019s the least I can do for now."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "We can talk later after you kick the holder\u2019s ass who kidnapped
+      us here."
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: Thank you, for listening to me.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: "See you again.\r"
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: See you.
+    speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: Fern turned into the ice.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.8653741, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: The message was sent to my watch.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.8653741, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Message
+    dialog: Get to the bridge.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 0.6555037, b: 0, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "I see the bike parked nearby, probably Fern\u2019s."
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.8653741, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Sorry, I need to use it now.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I start the bike and launch at high speed.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.8653741, a: 1}
+    fontSize: 54
+    isChangeBackground: 0

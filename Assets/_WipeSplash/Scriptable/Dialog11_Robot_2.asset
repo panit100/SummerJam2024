@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog11_Robot_2
+  m_EditorClassIdentifier: 
+  nextState: 0
+  backgroundSprite: {fileID: 21300000, guid: e1828e003bae6f74192427b97a4ba8da, type: 3}
+  bgmName: Dialog - Kon Pae Tee Mai Mee Nam Ta - Bird Thongshai
+  songName: Kon Pae Tee Mai Mee Nam Ta (Regrets)
+  artistName: Bird Thongshai
+  dialogList:
+  - speakername: Weird-Ass Robot
+    dialog: "Mu-ha-ha-a-a-a, I\u2019m waterproof."
+    speakerSprite: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "That\u2019s not the water."
+    speakerSprite: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I throw the lighter, it lands on its head.
+    speakerSprite: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Weird-Ass Robot
+    dialog: A-A-A-A, I AM NOT FIREPROOF.
+    speakerSprite: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Weird-Ass Robot
+    dialog: NOOOO!!!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: The fire covers the robot, and in 5 seconds it explodes.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: 40 degrees always works.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: Suddenly the sky flashes all over. The ground started to tremble.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: The sky's the giant dome that covers the whole replica city. They start
+      to break and fall.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I run to the bike and ride away.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: As I travel along the road, people start melting from the ice.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I help as many people as I can.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: DialogTest
   m_EditorClassIdentifier: 
-  nextState: 1
+  nextState: 0
   backgroundSprite: {fileID: 21300000, guid: 95b128ac72dde0342a265d360a2da3c5, type: 3}
+  bgmName: 
+  songName: 
+  artistName: 
   dialogList:
   - speakername: 
     dialog: After the incident last week, fortunately, there was no single casualty.

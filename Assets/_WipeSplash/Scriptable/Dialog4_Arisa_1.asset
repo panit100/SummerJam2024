@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog4_Arisa_1
   m_EditorClassIdentifier: 
-  nextState: 1
+  nextState: 0
   backgroundSprite: {fileID: 21300000, guid: f7160b8c13d35bb40916c1a67ba2280d, type: 3}
   bgmName: Dialog - Sao Suan Tang - Surachart Sombatjareun
   songName: Sao Suan Tang (Melon Girl)

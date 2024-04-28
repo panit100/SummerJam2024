@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog5_Arisa_2
+  m_EditorClassIdentifier: 
+  nextState: 0
+  backgroundSprite: {fileID: 21300000, guid: f7160b8c13d35bb40916c1a67ba2280d, type: 3}
+  bgmName: Dialog - Ou Jao Ei - Pete Pol
+  songName: Ou Jao Ei (My Dear)
+  artistName: Pete Pol
+  dialogList:
+  - speakername: Arisa
+    dialog: "My\u2026 you\u2019re good\u2026"
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "Sorry, Arisa. I can\u2019t lose this game either."
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: "You know, it\u2019s getting hotter day by day."
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: I wish I could have a big house with an air conditioner.
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: Luxury car, meal, and clothes. I wish I could have a bit of that.
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: "And my job... *sigh* I don\u2019t feel like myself with my job."
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Yeah, I understand.
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "Maybe some jobs just don\u2019t match our likes and styles."
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: What do you really want to be?
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Just answer it from your heart.
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: "\u2026"
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: I want to be a star.
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "That\u2019s not far from the truth."
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "You are pretty. It\u2019s not hard for you to shine."
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: "\u2026"
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: "Thank you\u2026"
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: You should start doing MyTube when this is all over.
+    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: Promise me you are going to be my subscriber!
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Heh, sure thing.
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: "I feel like I want to rest\u2026"
+    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: ...
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: She was covered in the ice cube.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: How many do I have to fight?
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I throw away the bad feeling and rush to the designated area.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
