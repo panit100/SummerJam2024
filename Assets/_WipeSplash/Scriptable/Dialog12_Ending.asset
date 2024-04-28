@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Dialog12_Ending
   m_EditorClassIdentifier: 
   nextState: 0
-  backgroundSprite: {fileID: 21300000, guid: 95b128ac72dde0342a265d360a2da3c5, type: 3}
+  backgroundSprite: {fileID: 21300000, guid: 04de052e55c95304ba00f5435997f9c2, type: 3}
   bgmName: Dialog - Prib Ta - Bird Thong Shai x Stamp
+  songName: Prib Ta (Shooting Star)
+  artistName: Bird Thongshai X Stamp
   dialogList:
   - speakername: 
     dialog: After the incident last week, fortunately, there was no single casualty.
@@ -69,8 +71,32 @@ MonoBehaviour:
     color: {r: 1, g: 0.82486737, b: 0, a: 1}
     fontSize: 54
     isChangeBackground: 0
-  - speakername: Jame
+  - speakername: James
     dialog: I'm going to touch some glass and enjoy the Water Festival.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Mina
+    dialog: Hey, James!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Arisa
+    dialog: Over here, cutie!
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: You are not going to win this time.
+    speakerSprite: {fileID: 0}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: Fern
+    dialog: Let's go!
     speakerSprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54

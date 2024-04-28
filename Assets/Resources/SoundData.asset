@@ -23,6 +23,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 96d08171c81032a4a9ab55875e0ad2ca, type: 3}
   - {fileID: 8300000, guid: d752bb353c9837d4798eab310b9d19c0, type: 3}
   - {fileID: 8300000, guid: 6b07bfccdd4cc0b488d3cfd7b288d302, type: 3}
+  - {fileID: 8300000, guid: 984d613fd53ba2a4498b31000b949622, type: 3}
+  - {fileID: 8300000, guid: c1d0c3dc9b2cff847a4f2b4d8e21585b, type: 3}
+  - {fileID: 8300000, guid: 3a61451379f28e04284700f132a85b96, type: 3}
+  - {fileID: 8300000, guid: 0422bf1f5ec21c14481700928d33f95e, type: 3}
+  - {fileID: 8300000, guid: ab56a234bfe61b64f93e0afc411e446a, type: 3}
+  - {fileID: 8300000, guid: ab56a234bfe61b64f93e0afc411e446a, type: 3}
+  - {fileID: 8300000, guid: e2308c0c7e5d47345a3c50106ec7852f, type: 3}
   allSFX:
   - {fileID: 8300000, guid: a7a3be8634a8b7b4f82327bd1b9ca09b, type: 3}
   - {fileID: 8300000, guid: 82f1d50e4b8661a4a8bf79597524da94, type: 3}

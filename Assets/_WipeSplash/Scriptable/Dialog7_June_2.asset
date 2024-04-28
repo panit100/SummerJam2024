@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
+  m_Name: Dialog7_June_2
+  m_EditorClassIdentifier: 
+  nextState: 0
+  backgroundSprite: {fileID: 21300000, guid: 5ff3fa25ffc28ac449744c6fd989c401, type: 3}
+  bgmName: Dialog - Reung Tee Kor - Lula
+  songName: Reung Tee Kor (What I Asked For)
+  artistName: Lula
+  dialogList:
+  - speakername: '?'
+    dialog: "You are so strong\u2026"
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: '?'
+    dialog: I lost, gotta admit it.
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Can I know your name at least?
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "It\u2019s June."
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Nice name you have there.
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: S-shut up!
+    speakerSprite: {fileID: 21300000, guid: 9c7fab20454355d49a879bbc86fd9b6f, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "Your talking style, your voice\u2026"
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "Reminds me of my ex-boyfriend\u2026"
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Really? Is that a compliment or an insult?
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: Both.
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: You still thinking of him?
+    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "Yeah\u2026"
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "It\u2019s been a year already."
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: You have to move on.
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "But I don\u2019t think I\u2019m ready\u2026"
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Life needs to go on, we all need to.
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: "Why don\u2019t you try hanging out with friends. It helps a lot."
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Watching movies, climbing the mountains, swimming in the sea.
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: "\u2026"
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: Can we hang out together? After this.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Sure, I got plenty of time.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: Thank you, for cheering me up.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: June
+    dialog: See you, James.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: James
+    dialog: Yeah, see you, June.
+    speakerSprite: {fileID: 21300000, guid: bc56a67796a7f7247b14929fbcdfe2ef, type: 3}
+    color: {r: 1, g: 1, b: 1, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: June was covered in ice cubes.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: "I need to hurry.\r"
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
+  - speakername: 
+    dialog: I see the bicycle lying down. It will be a good idea if I use the it
+      to travel to the next battle area.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9607844, a: 1}
+    fontSize: 54
+    isChangeBackground: 0

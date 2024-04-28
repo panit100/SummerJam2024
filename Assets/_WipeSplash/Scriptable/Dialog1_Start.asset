@@ -15,6 +15,8 @@ MonoBehaviour:
   nextState: 0
   backgroundSprite: {fileID: 21300000, guid: 2bf856865b365dc45bbae9c3b80c562a, type: 3}
   bgmName: Dialog - Pob Gun Mai - POLYCAT
+  songName: Phop Gun Mai? (So Long)
+  artistName: Polycat
   dialogList:
   - speakername: ' '
     dialog: "Where am I\u2026?"
@@ -30,13 +32,13 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: '?'
     dialog: Hello mister.
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Huh?
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 0}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
@@ -93,7 +95,7 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: " I\u2019m Tiwa and this is Ratri."
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
@@ -105,44 +107,44 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Come on Ratri! S-Say something to our competitor.
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 085d476bfe5da774a891967e9b1cb697, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Ratri
     dialog: ....
-    speakerSprite: {fileID: 21300000, guid: ca9eab96dd4f46542baf497ff60e6e4a, type: 3}
+    speakerSprite: {fileID: 21300000, guid: e70b2c3a3323e114cb87530101460054, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: "Ahem! Okay\u2026Sorry for our unprofessional action. We are both new
       to our jobs."
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 085d476bfe5da774a891967e9b1cb697, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "What the heck? It\u2019s this some kind of a gameshow on MyTube?"
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 085d476bfe5da774a891967e9b1cb697, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: "No, um\u2026, I mean, there could be a live broadcast."
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Please wait a sec...
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: ' '
     dialog: Tiwa picks up the pocket staff handbook and opens it.
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
     fontSize: 54
     isChangeBackground: 0
@@ -221,25 +223,25 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Glad you understand our unfortunate circumstances.
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Please board the train to your first destination.
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Tiwa
     dialog: Good luck!
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
     dialog: Tiwa waves at me.
-    speakerSprite: {fileID: 21300000, guid: 5e8beadf0ff2b8d4a89f50b8f517b496, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 4db66396ce1095b46ac5285ab743aa2b, type: 3}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
     fontSize: 54
     isChangeBackground: 0
