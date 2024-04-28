@@ -276,8 +276,10 @@ private void Start()
 
     public void StopDialogInteraction()
     {
+        StopCoroutine("CreateDialogSequence");
         dialogText.text = "";
         speakerText.text = "";
+
         dialogText.DOKill();
         dialogButtonAnimator.gameObject.SetActive(false);
         skipButton.gameObject.SetActive(false);
