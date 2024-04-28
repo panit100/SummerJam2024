@@ -56,19 +56,19 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: June
     dialog: "Your talking style, your voice\u2026"
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: June
     dialog: "Reminds me of my ex-boyfriend\u2026"
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Really? Is that a compliment or an insult?
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
@@ -86,49 +86,49 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: June
     dialog: "Yeah\u2026"
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: June
     dialog: "It\u2019s been a year already."
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: You have to move on.
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: June
     dialog: "But I don\u2019t think I\u2019m ready\u2026"
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Life needs to go on, we all need to.
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "Why don\u2019t you try hanging out with friends. It helps a lot."
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Watching movies, climbing the mountains, swimming in the sea.
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: June
     dialog: "\u2026"
-    speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 1cc84f49538000d4e8ba1170c6507081, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog6_June_1
   m_EditorClassIdentifier: 
-  nextState: 0
+  nextState: 1
   backgroundSprite: {fileID: 21300000, guid: 5ff3fa25ffc28ac449744c6fd989c401, type: 3}
   bgmName: Dialog - Yin Dee Tee Mai Ru Jak - 25hours
   songName: Hello Stranger

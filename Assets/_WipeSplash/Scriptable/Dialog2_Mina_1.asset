@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog2_Mina_1
   m_EditorClassIdentifier: 
-  nextState: 0
+  nextState: 1
   backgroundSprite: {fileID: 21300000, guid: 86d54a805379b8947b19b54647568893, type: 3}
   bgmName: Dialog - Cinderella - Tattoo Colour
   songName: Cinderella

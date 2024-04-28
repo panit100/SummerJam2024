@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog8_Fern_1
   m_EditorClassIdentifier: 
-  nextState: 0
+  nextState: 1
   backgroundSprite: {fileID: 21300000, guid: f9344de538e19db43b085e093b425ff2, type: 3}
   bgmName: Dialog - Sticker - Bodyslam
   songName: Sticker

@@ -32,55 +32,55 @@ MonoBehaviour:
     isChangeBackground: 0
   - speakername: Arisa
     dialog: "You know, it\u2019s getting hotter day by day."
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Arisa
     dialog: I wish I could have a big house with an air conditioner.
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Arisa
     dialog: Luxury car, meal, and clothes. I wish I could have a bit of that.
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Arisa
     dialog: "And my job... *sigh* I don\u2019t feel like myself with my job."
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Yeah, I understand.
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: "Maybe some jobs just don\u2019t match our likes and styles."
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: What do you really want to be?
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: James
     dialog: Just answer it from your heart.
-    speakerSprite: {fileID: 21300000, guid: 72a5c51d18b272f40aac42caa8f61db9, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
   - speakername: Arisa
     dialog: "\u2026"
-    speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}
+    speakerSprite: {fileID: 21300000, guid: 5df25ac4a75fa1f44b37998e804d9945, type: 3}
     color: {r: 1, g: 1, b: 1, a: 1}
     fontSize: 54
     isChangeBackground: 0
