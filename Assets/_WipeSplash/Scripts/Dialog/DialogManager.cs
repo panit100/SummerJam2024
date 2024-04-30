@@ -321,6 +321,7 @@ private void Start()
     {
         EventSystem.current.SetSelectedGameObject(null);
         CheckCompleteDialogInteraction();
+        SongNameDisplayer.ForcecStopDisplay();
     }
 
 #endregion
