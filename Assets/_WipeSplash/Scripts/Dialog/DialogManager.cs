@@ -51,9 +51,13 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private Button showBackgroundButton;
     [SerializeField] private CanvasGroup dialogGroup;
 
+    [Header("End Gmae System")]
+    [SerializeField] private EndGamePage EndGamePage;
+    
     [Header("Dialog Set")]
     [SerializeField] private int dialogSetCount;
     [SerializeField] private List<Dialog> dialogSetList;
+
 
     private Dialog dialogSet;
 
@@ -87,9 +91,6 @@ private void Start()
 
         speakerImage.sprite = null;
         speakerImageStartPosition = speakerImage.rectTransform.localPosition;
-
-        // UNCOMMENT AFTER TEST
-        // dialogCanvas.SetActive(false);
     }
     private void SetupButton()
     {
@@ -299,7 +300,7 @@ private void Start()
     {    
         if(dialogSet.nextState == Dialog.NextState.ENDGAME)
         {
-            // SHOW END GAME PANEL
+            EndGamePage.ActiveEndGame();
         }
         else if(dialogSet.nextState == Dialog.NextState.DIALOG)
         {
@@ -321,6 +322,7 @@ private void Start()
     {
         EventSystem.current.SetSelectedGameObject(null);
         CheckCompleteDialogInteraction();
+        SongNameDisplayer.ForcecStopDisplay();
     }
 
 #endregion

@@ -23,13 +23,14 @@ public class SongNameDisplayer : MonoBehaviour
         displayerTransform.gameObject.SetActive(false);
     }
 
+    private Sequence DisplaySequence;
     public void DisplaySongName(string songName, string artistName)
     {
         displayerTransform.gameObject.SetActive(true);
         songNameText.text = songName;
         artistNameText.text = artistName;
 
-        Sequence DisplaySequence = DOTween.Sequence();
+        DisplaySequence = DOTween.Sequence();
 
         DisplaySequence.Append(displayerTransform.DOLocalMove(stopPosition.localPosition, 1f));
         DisplaySequence.AppendInterval(3f);
@@ -38,8 +39,20 @@ public class SongNameDisplayer : MonoBehaviour
 
         DisplaySequence.Play();
     }
+    public void ForcecStopDisplay()
+    {
+        if(DisplaySequence.IsActive())
+        {
+            DisplaySequence = DOTween.Sequence();
+
+            DisplaySequence.Append(displayerTransform.DOLocalMove(startPosition, 1f));
+            DisplaySequence.AppendCallback(StopDisplay);
+
+            DisplaySequence.Play();
+        }
+    }
     void StopDisplay()
     {
-        displayerTransform.gameObject.SetActive(true);
+        displayerTransform.gameObject.SetActive(false);
     }
 }
