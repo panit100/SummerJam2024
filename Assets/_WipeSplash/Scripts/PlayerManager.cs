@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     public Item holdingItem;
     public RectTransform canvas;
     public InventoryPanel inventory;
+    
+    private float itemLerpSpeed = .1f;
 
     protected override void InitAfterAwake()
     {
@@ -35,12 +38,16 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void OnPickUpItem(Item item)
     {
+        Cursor.visible = false;
         holdingItem = item;
         item.EnableOnClickItem(false);
+        item.PlayItemPopUpAnimation();
     }
 
     public void OnPutDownItem()
     {
+        holdingItem.PlayItemPopDownAnimation();
+        Cursor.visible = true;
         holdingItem = null;
     }
 
@@ -53,6 +60,7 @@ public class PlayerManager : Singleton<PlayerManager>
         int tempY = inventory.CurrentGridY;
         inventory.OnExitGrid(tempX, tempY);
 
+        holdingItem.PlayItemPopUpAnimation();
         holdingItem.OnRotate();
 
         inventory.OnEnterGrid(tempX, tempY);
@@ -68,6 +76,6 @@ public class PlayerManager : Singleton<PlayerManager>
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             canvas, mousePos, Camera.main, out canvasPosition);
 
-        holdingItem.rect.localPosition = canvasPosition;
+        holdingItem.rect.localPosition = Vector2.Lerp(holdingItem.rect.localPosition, canvasPosition, itemLerpSpeed);
     }
 }
