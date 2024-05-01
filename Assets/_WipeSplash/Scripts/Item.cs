@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class Item : MonoBehaviour, IPointerClickHandler
 {
@@ -135,5 +136,16 @@ public class Item : MonoBehaviour, IPointerClickHandler
     {
         horizontalCooldown.fillAmount = cooldownTime / itemData.cooldown;
         verticalCooldown.fillAmount = cooldownTime / itemData.cooldown;
+    }
+
+    public void PlayItemPopUpAnimation()
+    {
+        transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
+        transform.DOScale(new Vector3(1.15f, 1.15f, 1.15f), .25f);
+    }
+
+    public void PlayItemPopDownAnimation()
+    {
+        transform.DOScale(new Vector3(1, 1, 1), .25f);
     }
 }
