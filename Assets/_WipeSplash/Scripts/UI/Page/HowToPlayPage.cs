@@ -12,6 +12,9 @@ public class HowToPlayPage : MonoBehaviour
     [SerializeField] private Animator panelAnimator;
     [SerializeField] private CanvasGroup panelGroup;
 
+    [Header("Sound Effect")]
+    [SerializeField] private string SfxId;
+
     [Header("Button")]
     [SerializeField] private Button howToPlayButton;
     [SerializeField] private Button backButton;
@@ -41,6 +44,8 @@ public class HowToPlayPage : MonoBehaviour
     void OpenHowToPlayPage()
     {
         howToPlayCanvas.SetActive(true);
+        SoundManager.Instance.PlaySFX(SfxId);
+
         panelGroup.alpha = 1;
         panelGroup.interactable = true;
         
@@ -53,6 +58,7 @@ public class HowToPlayPage : MonoBehaviour
     {
         panelAnimator.Play("Exit");
         panelGroup.interactable = false;
+        SoundManager.Instance.PlaySFX(SfxId);
         
         if(SwitchSQ.IsActive())
             SwitchSQ.Kill();
@@ -86,6 +92,7 @@ public class HowToPlayPage : MonoBehaviour
 
         panelAnimator.Play("Empty");
         panelAnimator.Play("Switch");
+        SoundManager.Instance.PlaySFX(SfxId);
         StartSwitchSequence();
     }
     private Sequence SwitchSQ;

@@ -32,6 +32,12 @@ public class DialogManager : Singleton<DialogManager>
     [Header("Transition Image")]
     [SerializeField] private Image transitionImage;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip typeSound;
+    [SerializeField] private AudioClip nextSound;
+    
+
     [Header("Dialog State")]
     [SerializeField] private DialogState dialogState;
     [SerializeField] private enum DialogState
@@ -75,7 +81,7 @@ private void Start()
         ChangeDialogState(DialogState.disabled);
 
         // REMOVE AFTER TEST: test run on start
-       StartDialogInteraction();
+        // StartDialogInteraction();
     }
     private void SetupCanvas()
     {
@@ -159,6 +165,10 @@ private void Start()
         dialogText.color = dialogSet.dialogList[dialogCount].color;
         dialogText.fontSize = dialogSet.dialogList[dialogCount].fontSize;
         char[] charArray = dialogSet.dialogList[dialogCount].dialog.ToCharArray();
+        
+        // audio
+        int audioCount = 0;
+        AudioSource.clip = typeSound;
 
         // portrait setup
         CheckChangeSprite();
@@ -168,6 +178,10 @@ private void Start()
 
         foreach(char character in charArray)
         {
+            if(audioCount % 2 == 0)
+                AudioSource.Play();
+            audioCount++;
+
             dialogText.text += character; 
             yield return new WaitForSeconds(0.05f);
         }
@@ -231,6 +245,9 @@ private void Start()
     #region next dialog button
     private void NextDialog()
     {
+        AudioSource.clip = nextSound;
+        AudioSource.Play();
+
         if(dialogState == DialogState.ready && dialogCount + 1 == dialogSet.dialogList.Count)
         {
             CheckCompleteDialogInteraction();
