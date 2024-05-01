@@ -294,7 +294,7 @@ private void Start()
 
     public void StopDialogInteraction()
     {
-        StopCoroutine("CreateDialogSequence");
+        StopAllCoroutines();
         dialogText.text = "";
         speakerText.text = "";
 

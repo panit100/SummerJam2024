@@ -101,7 +101,7 @@ public class HowToPlayPage : MonoBehaviour
         if(SwitchSQ.IsActive())
             SwitchSQ.Kill();
 
-        backButton.gameObject.SetActive(false);
+        backButton.interactable = false;
 
         SwitchSQ = DOTween.Sequence();
 
@@ -112,7 +112,7 @@ public class HowToPlayPage : MonoBehaviour
         SwitchSQ.AppendCallback(() => currentPage.SetActive(true));
 
         SwitchSQ.AppendInterval(.35f);
-        SwitchSQ.AppendCallback(() => backButton.gameObject.SetActive(true));
+        SwitchSQ.AppendCallback(() => backButton.interactable = true);
 
         SwitchSQ.Play();
     }
