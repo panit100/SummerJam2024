@@ -64,6 +64,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
         holdingItem.PlayItemPopUpAnimation();
         holdingItem.OnRotate();
+        SoundManager.Instance.PlaySFX("SFX_Inventory_Rotate");
 
         inventory.OnEnterGrid(tempX, tempY);
     }
