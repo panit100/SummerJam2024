@@ -17,6 +17,8 @@ public class SoundManager : PersistentSingleton<SoundManager>
     public SoundDatas soundDatas;
     public GameObject sfxPrefab;
     public int sfxCount = 10;
+    public AudioMixerGroup BGMMixer;
+    public AudioMixerGroup SFXMixer;
     public List<AudioSource> sfxAudios;
 
     protected override void InitAfterAwake()
@@ -25,6 +27,8 @@ public class SoundManager : PersistentSingleton<SoundManager>
         childobj.transform.SetParent(this.transform);
         var main = this.gameObject.AddComponent<AudioSource>();
         main.volume = 0.5f;
+        main.outputAudioMixerGroup = BGMMixer;
+        main.loop = true;
         var sfx = childobj.AddComponent<AudioSource>();
         sfxPrefab = Resources.Load<GameObject>("sfxAudio");
         sfxAudioVolume = 0.5f;
@@ -92,6 +96,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
             GameObject obj = Instantiate(sfxPrefab);
             AudioSource auido = obj.GetComponent<AudioSource>();
             auido.volume = sfxAudioVolume;
+            auido.outputAudioMixerGroup = SFXMixer;
             obj.transform.SetParent(this.gameObject.transform);
             sfxAudios.Add(auido);
         }

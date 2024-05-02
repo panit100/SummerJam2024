@@ -56,6 +56,7 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private Button hideBackgroundButton;
     [SerializeField] private Button showBackgroundButton;
     [SerializeField] private CanvasGroup dialogGroup;
+    [SerializeField] private CanvasGroup audioButton;
 
     [Header("End Gmae System")]
     [SerializeField] private EndGamePage EndGamePage;
@@ -298,7 +299,6 @@ private void Start()
         dialogText.text = "";
         speakerText.text = "";
 
-        dialogText.DOKill();
         dialogButtonAnimator.gameObject.SetActive(false);
         skipButton.gameObject.SetActive(false);
         
@@ -353,6 +353,8 @@ private void Start()
 
         BGSequence.AppendCallback(() => dialogGroup.interactable = false);
         BGSequence.Append(dialogGroup.DOFade(0, 1f));
+        BGSequence.JoinCallback(() => audioButton.interactable = false);
+        BGSequence.Join(audioButton.DOFade(0, 1f));
         BGSequence.AppendCallback(() => hideBackgroundButton.interactable = true);
         BGSequence.AppendCallback(() => showBackgroundButton.gameObject.SetActive(true));
 
@@ -364,6 +366,8 @@ private void Start()
 
         BGSequence.AppendCallback(() => showBackgroundButton.gameObject.SetActive(false));
         BGSequence.Append(dialogGroup.DOFade(1, 1f));
+        BGSequence.Join(audioButton.DOFade(1, 1f));
+        BGSequence.AppendCallback(() => audioButton.interactable = true);
         BGSequence.AppendCallback(() => dialogGroup.interactable = true);
         BGSequence.AppendCallback(() => hideBackgroundButton.interactable = true);
 
