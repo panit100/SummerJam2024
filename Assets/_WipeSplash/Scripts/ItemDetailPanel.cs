@@ -5,6 +5,7 @@ using Naninovel;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemDetailPanel : Singleton<ItemDetailPanel>
 {
@@ -66,7 +67,7 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
 
         setItemText(item.ItemData);
 
-        setPanelPosition(item.rect.localPosition);
+        setPanelPosition(item);
 
         canvasGroup.alpha = 1;
     }
@@ -83,7 +84,7 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         itemCooldown.text = $"Cooldown : {item.cooldown}";
     }
 
-    void setPanelPosition(Vector3 itemPosition)
+    void setPanelPosition(Item item)
     {
         //     screen hight
         //         ^
@@ -94,7 +95,16 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         //         v
         //         0
 
-        Vector3 offset = Vector3.zero;
+
+        var minposition = item.rect.localPosition;
+        var maxposition = item.rect.localPosition + new Vector3(100 * (item.ItemData.row - 1), 0, 0);
+
+        var startPos = maxposition;
+        var pivot = new Vector2(0, 1);
+        var offset = new Vector3(50, 0, 0);
+
+        rect.pivot = pivot;
+        rect.localPosition = startPos + offset;
 
         Vector3[] corners = new Vector3[4];
         rect.GetWorldCorners(corners);
@@ -102,30 +112,21 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         Vector3 point0 = Camera.main.WorldToScreenPoint(corners[0]);
         Vector3 point2 = Camera.main.WorldToScreenPoint(corners[2]);
 
-        if (point0.x < 0)
-        {
-            rect.pivot = new Vector2(0, rect.pivot.y);
-            offset += new Vector3(100, 0, 0);
-        }
-        if (point2.x > Screen.width)
-        {
-            rect.pivot = new Vector2(1, rect.pivot.y);
-            offset -= new Vector3(100, 0, 0);
-        }
-
         if (point0.y < 0)
         {
-            rect.pivot = new Vector2(rect.pivot.x, 0);
-            offset += new Vector3(0, 100, 0);
+            pivot = new Vector2(pivot.x, 0);
         }
 
-        if (point2.y > Screen.height)
+        if (point2.x > Screen.width)
         {
-            rect.pivot = new Vector2(rect.pivot.x, 1);
-            offset -= new Vector3(0, 100, 0);
+            pivot = new Vector2(1, pivot.y);
+            startPos = minposition;
+            offset = new Vector3(-50, 0, 0);
         }
 
-        rect.localPosition = itemPosition + offset;
+        rect.pivot = pivot;
+        rect.localPosition = startPos + offset;
+
     }
 
     public void Close()
