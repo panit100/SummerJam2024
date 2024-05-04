@@ -19,7 +19,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 1,
             cooldown = 1.4f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Tactical_Gun_1&2"
         },
         new ItemData{
             id = 1,
@@ -35,7 +36,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 1.2f,
             cooldown = 1.2f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Tactical_Gun_1&2"
         },
         new ItemData{
             id = 2,
@@ -51,7 +53,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 1,
             cooldown = 0.8f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Tactical_Gun_3"
         },
         new ItemData{
             id = 3,
@@ -67,7 +70,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 1.7f,
             cooldown = 1.8f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Handmade_Gun_1&2"
         },
         new ItemData{
             id = 4,
@@ -83,7 +87,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 2.2f,
             cooldown = 2f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Handmade_Gun_1&2"
         },
         new ItemData{
             id = 5,
@@ -99,7 +104,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 2.2f,
             cooldown = 2.2f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Handmade_Gun_3"
         },
         new ItemData{
             id = 6,
@@ -115,7 +121,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 2f,
             cooldown = 2f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Bucket_2"
         },
         new ItemData{
             id = 7,
@@ -131,7 +138,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 2.7f,
             cooldown = 2.4f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Bucket_1"
         },
         new ItemData{
             id = 8,
@@ -147,7 +155,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 3f,
             cooldown = 2.7f,
-            itemType = ItemType.ATTACK
+            itemType = ItemType.ATTACK,
+            soundId = "SFX_Inventory_Bucket_3"
         },
         new ItemData{
             id = 9,
@@ -163,7 +172,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 0,
             cooldown = 0,
-            itemType = ItemType.DEFENSE
+            itemType = ItemType.DEFENSE,
+            soundId = "SFX_Inventory_Wears_1&2"
         },
         new ItemData{
             id = 10,
@@ -179,7 +189,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 0,
             cooldown = 0,
-            itemType = ItemType.DEFENSE
+            itemType = ItemType.DEFENSE,
+            soundId = "SFX_Inventory_Wears_1&2"
         },
         new ItemData{
             id = 11,
@@ -195,7 +206,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 0,
             cooldown = 0,
-            itemType = ItemType.DEFENSE
+            itemType = ItemType.DEFENSE,
+            soundId = "SFX_Inventory_Wears_3"
         },
         new ItemData{
             id = 12,
@@ -211,7 +223,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 0,
             cooldown = 4f,
-            itemType = ItemType.SUPPORT
+            itemType = ItemType.SUPPORT,
+            soundId = "SFX_Inventory_Food_1"
         },
         new ItemData{
             id = 13,
@@ -227,7 +240,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 0,
             cooldown = 3f,
-            itemType = ItemType.SUPPORT
+            itemType = ItemType.SUPPORT,
+            soundId = "SFX_Inventory_Food_2"
         },
         new ItemData{
             id = 14,
@@ -243,7 +257,8 @@ public static class AllItemData
             regenStamina = 0,
             staminaCost = 0,
             cooldown = 3f,
-            itemType = ItemType.SUPPORT
+            itemType = ItemType.SUPPORT,
+            soundId = "SFX_Inventory_Food_3"
         },
         new ItemData{
             id = 15,
@@ -259,7 +274,8 @@ public static class AllItemData
             regenStamina = 2,
             staminaCost = 0,
             cooldown = 3f,
-            itemType = ItemType.SUPPORT
+            itemType = ItemType.SUPPORT,
+            soundId = "SFX_Inventory_Drink_1"
         },
         new ItemData{
             id = 16,
@@ -275,7 +291,8 @@ public static class AllItemData
             regenStamina = 2.5f,
             staminaCost = 0,
             cooldown = 4f,
-            itemType = ItemType.SUPPORT
+            itemType = ItemType.SUPPORT,
+            soundId = "SFX_Inventory_Drink_2"
         },
         new ItemData{
             id = 17,
@@ -291,7 +308,8 @@ public static class AllItemData
             regenStamina = 3,
             staminaCost = 0,
             cooldown = 4.5f,
-            itemType = ItemType.SUPPORT
+            itemType = ItemType.SUPPORT,
+            soundId = "SFX_Inventory_Drink_3"
         },
     };
 }

@@ -32,6 +32,12 @@ public class DialogManager : Singleton<DialogManager>
     [Header("Transition Image")]
     [SerializeField] private Image transitionImage;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource AudioSource;
+    [SerializeField] private AudioClip typeSound;
+    [SerializeField] private AudioClip nextSound;
+    
+
     [Header("Dialog State")]
     [SerializeField] private DialogState dialogState;
     [SerializeField] private enum DialogState
@@ -50,10 +56,15 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private Button hideBackgroundButton;
     [SerializeField] private Button showBackgroundButton;
     [SerializeField] private CanvasGroup dialogGroup;
+    [SerializeField] private CanvasGroup audioButton;
 
+    [Header("End Gmae System")]
+    [SerializeField] private EndGamePage EndGamePage;
+    
     [Header("Dialog Set")]
     [SerializeField] private int dialogSetCount;
     [SerializeField] private List<Dialog> dialogSetList;
+
 
     private Dialog dialogSet;
 
@@ -71,7 +82,7 @@ private void Start()
         ChangeDialogState(DialogState.disabled);
 
         // REMOVE AFTER TEST: test run on start
-       StartDialogInteraction();
+        // StartDialogInteraction();
     }
     private void SetupCanvas()
     {
@@ -87,9 +98,6 @@ private void Start()
 
         speakerImage.sprite = null;
         speakerImageStartPosition = speakerImage.rectTransform.localPosition;
-
-        // UNCOMMENT AFTER TEST
-        // dialogCanvas.SetActive(false);
     }
     private void SetupButton()
     {
@@ -158,6 +166,10 @@ private void Start()
         dialogText.color = dialogSet.dialogList[dialogCount].color;
         dialogText.fontSize = dialogSet.dialogList[dialogCount].fontSize;
         char[] charArray = dialogSet.dialogList[dialogCount].dialog.ToCharArray();
+        
+        // audio
+        int audioCount = 0;
+        AudioSource.clip = typeSound;
 
         // portrait setup
         CheckChangeSprite();
@@ -167,6 +179,10 @@ private void Start()
 
         foreach(char character in charArray)
         {
+            if(audioCount % 2 == 0)
+                AudioSource.Play();
+            audioCount++;
+
             dialogText.text += character; 
             yield return new WaitForSeconds(0.05f);
         }
@@ -230,6 +246,9 @@ private void Start()
     #region next dialog button
     private void NextDialog()
     {
+        AudioSource.clip = nextSound;
+        AudioSource.Play();
+
         if(dialogState == DialogState.ready && dialogCount + 1 == dialogSet.dialogList.Count)
         {
             CheckCompleteDialogInteraction();
@@ -276,11 +295,10 @@ private void Start()
 
     public void StopDialogInteraction()
     {
-        StopCoroutine("CreateDialogSequence");
+        StopAllCoroutines();
         dialogText.text = "";
         speakerText.text = "";
 
-        dialogText.DOKill();
         dialogButtonAnimator.gameObject.SetActive(false);
         skipButton.gameObject.SetActive(false);
         
@@ -299,7 +317,7 @@ private void Start()
     {    
         if(dialogSet.nextState == Dialog.NextState.ENDGAME)
         {
-            // SHOW END GAME PANEL
+            EndGamePage.ActiveEndGame();
         }
         else if(dialogSet.nextState == Dialog.NextState.DIALOG)
         {
@@ -321,6 +339,7 @@ private void Start()
     {
         EventSystem.current.SetSelectedGameObject(null);
         CheckCompleteDialogInteraction();
+        SongNameDisplayer.ForcecStopDisplay();
     }
 
 #endregion
@@ -334,6 +353,8 @@ private void Start()
 
         BGSequence.AppendCallback(() => dialogGroup.interactable = false);
         BGSequence.Append(dialogGroup.DOFade(0, 1f));
+        BGSequence.JoinCallback(() => audioButton.interactable = false);
+        BGSequence.Join(audioButton.DOFade(0, 1f));
         BGSequence.AppendCallback(() => hideBackgroundButton.interactable = true);
         BGSequence.AppendCallback(() => showBackgroundButton.gameObject.SetActive(true));
 
@@ -345,6 +366,8 @@ private void Start()
 
         BGSequence.AppendCallback(() => showBackgroundButton.gameObject.SetActive(false));
         BGSequence.Append(dialogGroup.DOFade(1, 1f));
+        BGSequence.Join(audioButton.DOFade(1, 1f));
+        BGSequence.AppendCallback(() => audioButton.interactable = true);
         BGSequence.AppendCallback(() => dialogGroup.interactable = true);
         BGSequence.AppendCallback(() => hideBackgroundButton.interactable = true);
 

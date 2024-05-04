@@ -27,4 +27,5 @@ public struct ItemData
     public float staminaCost;
     public float cooldown;
     public ItemType itemType;
+    public string soundId;
 }
