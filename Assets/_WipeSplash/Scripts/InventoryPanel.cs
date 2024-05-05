@@ -111,6 +111,7 @@ public class InventoryPanel : MonoBehaviour
 
         Vector2 gridPos = new Vector2(gridX, gridY);
         item.SetPosition(gridPos, GetPositionByGrid(gridPos));
+        item.transform.SetParent(itemContainer);
         items.Add(item);
     }
 

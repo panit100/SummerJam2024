@@ -21,7 +21,8 @@ public class MainMenuManager : MonoBehaviour
         subcanvasOBJ = subcanvas.gameObject;
         startButton.onClick.AddListener(ClickToGame);
         creditButton.onClick.AddListener(clickTocredit);
-        backcreditButton.onClick.AddListener(creditToMenu);
+        if (backcreditButton != null)
+            backcreditButton.onClick.AddListener(creditToMenu);
         credit.alpha = 0;
         credit.blocksRaycasts = false;
     }
@@ -45,7 +46,7 @@ public class MainMenuManager : MonoBehaviour
         credit.blocksRaycasts = false;
     }
 
-     void ToggleMainMenu(bool isToggle)
+    void ToggleMainMenu(bool isToggle)
     {
         if (isToggle)
         {
