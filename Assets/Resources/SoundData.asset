@@ -42,5 +42,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aaf3dbb1b97d8cb4d9e84ded59faf197, type: 3}
   - {fileID: 8300000, guid: 1062fe0691a996048ac00f8a8570fc0c, type: 3}
   - {fileID: 8300000, guid: cad97d2632980084b882c528650940f0, type: 3}
+  - {fileID: 8300000, guid: 7d2d9d4a5aa5cdd4b864fc720692f89d, type: 3}
+  - {fileID: 8300000, guid: 53b57b5814de4f64296f29b650139fb8, type: 3}
+  - {fileID: 8300000, guid: fa737f01b0b10d646b8f93afcb887703, type: 3}
+  - {fileID: 8300000, guid: 5413b9d9b1a881f42844aa3e2a10addc, type: 3}
+  - {fileID: 8300000, guid: e205e6c02160d4a4ea89d94978d3c374, type: 3}
+  - {fileID: 8300000, guid: cb8c081f0c02cb446adc8566a1368cf1, type: 3}
+  - {fileID: 8300000, guid: de58f76f71cfd2841850ef9b01e6fa50, type: 3}
+  - {fileID: 8300000, guid: 98c71d98cc8cc654695f18cd879937de, type: 3}
+  - {fileID: 8300000, guid: 0d9f8217533cc9545992a807befabfd1, type: 3}
+  - {fileID: 8300000, guid: 46575e881daee544bb8a57b6bc99f4c9, type: 3}
+  - {fileID: 8300000, guid: bdaa2960d1b1d394c89e7774933d9a25, type: 3}
+  - {fileID: 8300000, guid: e6f5ed2c0964d6e43941a95a98cc1152, type: 3}
+  - {fileID: 8300000, guid: a2e2b3b8a6a66634aa8fd2ad5b3fc0f2, type: 3}
+  - {fileID: 8300000, guid: a3c9a7b60d3036f439d038af204353b3, type: 3}
+  - {fileID: 8300000, guid: bde9fe560d97bc54092263a893916193, type: 3}
+  - {fileID: 8300000, guid: 3a81a9ad63edfbd4e935a47d1ac96795, type: 3}
+  - {fileID: 8300000, guid: 9a34ee8699816514aafe15e66b7c112d, type: 3}
   audioMixers:
   - {fileID: 24300002, guid: 12778df04842ccb409d8e70282c0f311, type: 2}
+  - {fileID: -7863793579431424181, guid: 12778df04842ccb409d8e70282c0f311, type: 2}
+  - {fileID: 7579305339942317716, guid: 12778df04842ccb409d8e70282c0f311, type: 2}

@@ -42,6 +42,7 @@ public class PlayerManager : Singleton<PlayerManager>
         holdingItem = item;
         item.EnableOnClickItem(false);
         item.PlayItemPopUpAnimation();
+        SoundManager.Instance.PlaySFX(item.ItemData.soundId);
     }
 
     public void OnPutDownItem()
@@ -50,6 +51,7 @@ public class PlayerManager : Singleton<PlayerManager>
         Cursor.visible = true;
         holdingItem.EnableOnClickItem(true);
         holdingItem = null;
+        SoundManager.Instance.PlaySFX("SFX_Inventory_PutDown");
     }
 
     void OnRotateItem()
@@ -63,6 +65,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
         holdingItem.PlayItemPopUpAnimation();
         holdingItem.OnRotate();
+        SoundManager.Instance.PlaySFX("SFX_Inventory_Rotate");
 
         inventory.OnEnterGrid(tempX, tempY);
     }

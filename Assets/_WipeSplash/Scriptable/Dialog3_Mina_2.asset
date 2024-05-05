@@ -163,13 +163,13 @@ MonoBehaviour:
     color: {r: 1, g: 0.5566945, b: 0, a: 1}
     fontSize: 54
     isChangeBackground: 0
-  - speakername: Announcer
+  - speakername: 
     dialog: "Shit, I hope she\u2019s alright inside that ice cube."
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
     fontSize: 54
     isChangeBackground: 0
-  - speakername: Announcer
+  - speakername: 
     dialog: She better be.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.85882354, a: 1}
