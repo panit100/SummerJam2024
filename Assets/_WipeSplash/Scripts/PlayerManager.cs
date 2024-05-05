@@ -8,7 +8,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public Item holdingItem;
     public RectTransform canvas;
     public InventoryPanel inventory;
-    
+
     private float itemLerpSpeed = .1f;
 
     protected override void InitAfterAwake()
@@ -49,6 +49,7 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         holdingItem.PlayItemPopDownAnimation();
         Cursor.visible = true;
+        holdingItem.EnableOnClickItem(true);
         holdingItem = null;
         SoundManager.Instance.PlaySFX("SFX_Inventory_PutDown");
     }

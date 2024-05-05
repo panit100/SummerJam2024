@@ -20,15 +20,22 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if (GameManager.Instance.gameState != GAMESTATE.INVENTORY)
+        {
             return;
+        }
 
         if (PlayerManager.Instance.holdingItem == null)
+        {
             return;
+        }
 
         var item = PlayerManager.Instance.holdingItem;
         PlayerManager.Instance.OnPutDownItem();
         StoreItem(item);
         MergeItem(item);
+
+        if (PlayerManager.Instance.holdingItem == null)
+            ItemDetailPanel.Instance.Open(item);
     }
 
     protected override void InitAfterAwake()

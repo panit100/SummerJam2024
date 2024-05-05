@@ -46,7 +46,7 @@ public class InventoryPanel : MonoBehaviour
         if (isRotate)
             newItem.OnRotate();
         StoreItem(gridX, gridY, newItem);
-        newItem.EnableOnClickItem(false);
+        newItem.EnableOnClickItem(true);
     }
 
     void InitInventory()
@@ -111,7 +111,7 @@ public class InventoryPanel : MonoBehaviour
 
         Vector2 gridPos = new Vector2(gridX, gridY);
         item.SetPosition(gridPos, GetPositionByGrid(gridPos));
-        item.rect.SetParent(itemContainer);
+        item.transform.SetParent(itemContainer);
         items.Add(item);
     }
 
@@ -167,16 +167,19 @@ public class InventoryPanel : MonoBehaviour
 
             StoreItem(x, y, item);
             PlayerManager.Instance.OnPutDownItem();
+
+            if (PlayerManager.Instance.holdingItem == null)
+                ItemDetailPanel.Instance.Open(item);
+
             return;
         }
 
+    }
+
+    public void OnPickupItem(int x, int y)
+    {
         if (inventorySlots[x][y] == 0)
         {
-            if (PlayerManager.Instance.holdingItem != null)
-            {
-                return;
-            }
-
             var grid = grids[x, y];
             Item item = grid.GetItem();
             RemoveItem(item);
@@ -286,7 +289,7 @@ public class InventoryPanel : MonoBehaviour
         items.Clear();
     }
 
-    void printGrid()
+    public void printGrid()
     {
         for (int y = 0; y < inventorySlots[0].Length; y++)
         {

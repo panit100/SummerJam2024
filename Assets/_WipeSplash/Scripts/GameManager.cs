@@ -27,12 +27,12 @@ public class GameManager : Singleton<GameManager>
     [Header("Background")]
     [SerializeField] private Image backgroundImage;
 
-    [Header("UI")] 
- 
+    [Header("UI")]
+
     public Canvas GameCanvas;
     public Canvas DialogueCanvas;
-    public RectTransform inventoryStatePanel;
-    public RectTransform fightStatePanel;
+    public CanvasGroup inventoryStatePanel;
+    public CanvasGroup fightStatePanel;
     public TMP_Text winText;
     public TMP_Text loseText;
     public Button endButton;
@@ -82,17 +82,24 @@ public class GameManager : Singleton<GameManager>
                     n.ResetItem();
                 }
 
-                inventoryStatePanel.localPosition = new Vector2(0, 0);
-                inventoryStatePanel.anchoredPosition = new Vector2(0, 0);
-                fightStatePanel.localPosition = new Vector2(1920, 0);
-                fightStatePanel.anchoredPosition = new Vector2(-1920, 0);
+                inventoryStatePanel.alpha = 1;
+                inventoryStatePanel.blocksRaycasts = true;
+                inventoryStatePanel.interactable = true;
+
+                fightStatePanel.alpha = 0;
+                fightStatePanel.blocksRaycasts = false;
+                fightStatePanel.interactable = false;
                 break;
             case GAMESTATE.SETUPBATTLE:
                 SoundManager.Instance.ChangeBGM("Battle_PaShed");
-                fightStatePanel.localPosition = new Vector2(0, 0);
-                fightStatePanel.anchoredPosition = new Vector2(0, 0);
-                inventoryStatePanel.localPosition = new Vector2(1920, 0);
-                inventoryStatePanel.anchoredPosition = new Vector2(-1920, 0);
+
+                fightStatePanel.alpha = 1;
+                fightStatePanel.blocksRaycasts = true;
+                fightStatePanel.interactable = true;
+
+                inventoryStatePanel.alpha = 0;
+                inventoryStatePanel.blocksRaycasts = false;
+                inventoryStatePanel.interactable = false;
                 SetupPlayer();
                 SetupEnemy(currentEnemy);
                 break;

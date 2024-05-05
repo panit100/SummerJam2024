@@ -7,9 +7,12 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] Button startButton;
     [SerializeField] Button creditButton;
+    [SerializeField] Button backcreditButton;
     [SerializeField] Canvas subcanvas;
     [SerializeField] LoadingManager loadingMAG;
     [SerializeField] GraphicRaycaster subcanvasRaycaster;
+
+    [SerializeField] CanvasGroup credit;
     GameObject subcanvasOBJ;
     const string BGMmainmenu = "MainMenu_RuDooRon";
     void Start()
@@ -17,7 +20,11 @@ public class MainMenuManager : MonoBehaviour
         SoundManager.Instance.ChangeBGM(BGMmainmenu);
         subcanvasOBJ = subcanvas.gameObject;
         startButton.onClick.AddListener(ClickToGame);
-        creditButton.onClick.AddListener(delegate{});
+        creditButton.onClick.AddListener(clickTocredit);
+        if (backcreditButton != null)
+            backcreditButton.onClick.AddListener(creditToMenu);
+        credit.alpha = 0;
+        credit.blocksRaycasts = false;
     }
 
     void ClickToGame()
@@ -28,7 +35,18 @@ public class MainMenuManager : MonoBehaviour
         loadingMAG.DoLoading();
     }
 
-     void ToggleMainMenu(bool isToggle)
+    void clickTocredit()
+    {
+        credit.alpha = 1;
+        credit.blocksRaycasts = true;
+    }
+    void creditToMenu()
+    {
+        credit.alpha = 0;
+        credit.blocksRaycasts = false;
+    }
+
+    void ToggleMainMenu(bool isToggle)
     {
         if (isToggle)
         {

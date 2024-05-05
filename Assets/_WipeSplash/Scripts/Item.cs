@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class Item : MonoBehaviour, IPointerClickHandler
+public class Item : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public int gridX;
     public int gridY;
@@ -27,6 +27,20 @@ public class Item : MonoBehaviour, IPointerClickHandler
 
     public float cooldownTime = 0;
 
+    bool isOpenDetail = false;
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isOpenDetail = true;
+        if (PlayerManager.Instance.holdingItem == null)
+            ItemDetailPanel.Instance.Open(this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isOpenDetail = false;
+        ItemDetailPanel.Instance.Close();
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         if (GameManager.Instance.gameState != GAMESTATE.INVENTORY)
@@ -40,6 +54,12 @@ public class Item : MonoBehaviour, IPointerClickHandler
         if (gridX == -1)
         {
             StoragePanel.Instance.PickUpItem(this);
+            ItemDetailPanel.Instance.Close();
+        }
+        else
+        {
+            PlayerManager.Instance.inventory.OnPickupItem(gridX, gridY);
+            ItemDetailPanel.Instance.Close();
         }
     }
 
@@ -100,6 +120,7 @@ public class Item : MonoBehaviour, IPointerClickHandler
 
     private void Update()
     {
+
         if (GameManager.Instance.gameState != GAMESTATE.BATTLE)
             return;
 
@@ -115,7 +136,7 @@ public class Item : MonoBehaviour, IPointerClickHandler
                 case 0:
                     SoundManager.Instance.PlaySFX("magic_01");
                     break;
-                case 1 :
+                case 1:
                     SoundManager.Instance.PlaySFX("magic_02");
                     break;
                 default:
