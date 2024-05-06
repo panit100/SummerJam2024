@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using CuteEngine.Utilities;
+using Unity.VisualScripting;
+using System.Linq;
 
 public class SoundManager : PersistentSingleton<SoundManager>
 {
@@ -42,7 +44,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
         // sfxAudioVolume = PlayerPrefs.GetFloat("sfxVolume");
     }
 
- 
+
 
     public void ChangeBGM(string fileName)
     {
@@ -54,7 +56,12 @@ public class SoundManager : PersistentSingleton<SoundManager>
     public void PlaySFX(string fileName, bool isLoop = default(bool))
     {
         AudioClip c = soundDatas.allSFX.Find(clip => clip.name == fileName);
-        var audioSourceTemp = sfxAudios.FindAll(audio => audio.isPlaying && audio.clip.name == fileName);
+        var audioSourceTemp = sfxAudios.Where(audio => audio.clip == c && audio.isPlaying).ToList();
+        if (audioSourceTemp.Count > 3)
+        {
+            print("audio play more than 3 audio");
+            return;
+        }
         AudioSource audioSource = sfxAudios.Find(audio => audio.isPlaying == false);
         if (!audioSource)
         {
@@ -62,7 +69,6 @@ public class SoundManager : PersistentSingleton<SoundManager>
             AudioSource auido = obj.GetComponent<AudioSource>();
             obj.transform.SetParent(this.gameObject.transform);
         }
-        if(audioSourceTemp.Count >3) return;
         audioSource.volume = sfxAudioVolume;
         audioSource.loop = isLoop;
         audioSource.clip = c;

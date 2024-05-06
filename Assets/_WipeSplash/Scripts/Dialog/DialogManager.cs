@@ -36,11 +36,12 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private AudioSource AudioSource;
     [SerializeField] private AudioClip typeSound;
     [SerializeField] private AudioClip nextSound;
-    
+
 
     [Header("Dialog State")]
     [SerializeField] private DialogState dialogState;
-    [SerializeField] private enum DialogState
+    [SerializeField]
+    private enum DialogState
     {
         disabled, progress, ready
     }
@@ -60,7 +61,7 @@ public class DialogManager : Singleton<DialogManager>
 
     [Header("End Gmae System")]
     [SerializeField] private EndGamePage EndGamePage;
-    
+
     [Header("Dialog Set")]
     [SerializeField] private int dialogSetCount;
     [SerializeField] private List<Dialog> dialogSetList;
@@ -68,14 +69,14 @@ public class DialogManager : Singleton<DialogManager>
 
     private Dialog dialogSet;
 
-#region setup functions
+    #region setup functions
 
-protected override void InitAfterAwake()
-{
-    
-}
+    protected override void InitAfterAwake()
+    {
 
-private void Start()
+    }
+
+    private void Start()
     {
         SetupCanvas();
         SetupButton();
@@ -106,7 +107,7 @@ private void Start()
 
         skipButton.onClick.AddListener(SkipDialog);
         skipButton.gameObject.SetActive(false);
-        
+
         dialogButtonAnimator.gameObject.SetActive(false);
         hideBackgroundButton.gameObject.SetActive(false);
         showBackgroundButton.gameObject.SetActive(false);
@@ -115,15 +116,15 @@ private void Start()
         showBackgroundButton.onClick.AddListener(ShowBackground);
     }
 
-#endregion
+    #endregion
 
-#region dialog activation
+    #region dialog activation
 
     public void StartDialogInteraction()
     {
         dialogSet = dialogSetList[dialogSetCount];
         dialogCount = 0;
-        
+
         ChangeDialogState(DialogState.ready);
         dialogCanvas.SetActive(true);
         transitionImage.gameObject.SetActive(true);
@@ -134,7 +135,7 @@ private void Start()
         SoundManager.Instance.ChangeBGM(dialogSet.bgmName);
 
         Sequence StartSequence = DOTween.Sequence();
-        
+
         StartSequence.Append(transitionImage.DOFade(0, 2.5f));
         StartSequence.AppendCallback(() => transitionImage.gameObject.SetActive(false));
         StartSequence.Append(dialogGroup.DOFade(1, 1));
@@ -144,9 +145,9 @@ private void Start()
         StartSequence.Play();
     }
 
-#endregion
+    #endregion
 
-#region dialog play
+    #region dialog play
 
     #region dialog create
     private void CreateDialog()
@@ -166,7 +167,7 @@ private void Start()
         dialogText.color = dialogSet.dialogList[dialogCount].color;
         dialogText.fontSize = dialogSet.dialogList[dialogCount].fontSize;
         char[] charArray = dialogSet.dialogList[dialogCount].dialog.ToCharArray();
-        
+
         // audio
         int audioCount = 0;
         AudioSource.clip = typeSound;
@@ -177,13 +178,13 @@ private void Start()
         // background setup
         CheckChangeBackground();
 
-        foreach(char character in charArray)
+        foreach (char character in charArray)
         {
-            if(audioCount % 2 == 0)
+            if (audioCount % 2 == 0)
                 AudioSource.Play();
             audioCount++;
 
-            dialogText.text += character; 
+            dialogText.text += character;
             yield return new WaitForSeconds(0.05f);
         }
 
@@ -199,36 +200,36 @@ private void Start()
 
     #region image setup
 
-        void CheckChangeSprite()
+    void CheckChangeSprite()
+    {
+        Sprite currentSprite = dialogSet.dialogList[dialogCount].speakerSprite;
+
+        if (currentSprite == null)
         {
-            Sprite currentSprite = dialogSet.dialogList[dialogCount].speakerSprite;
-
-            if(currentSprite == null)
-            {
-                speakerImage.DOFade(0, .5f);
-            }
-            else if(currentSprite != null && currentSprite != speakerImage.sprite)
-            {
-                speakerImage.DOKill();
-
-                speakerImage.sprite = currentSprite;
-                speakerImage.rectTransform.localPosition = speakerImageStartPosition + (Vector3.up * -150);
-                speakerImage.rectTransform.DOLocalMove(speakerImageStartPosition, .5f).SetEase(Ease.OutBounce);
-                speakerImage.DOFade(1f, .5f);
-            }
+            speakerImage.DOFade(0, .5f);
         }
+        else if (currentSprite != null && currentSprite != speakerImage.sprite)
+        {
+            speakerImage.DOKill();
+
+            speakerImage.sprite = currentSprite;
+            speakerImage.rectTransform.localPosition = speakerImageStartPosition + (Vector3.up * -150);
+            speakerImage.rectTransform.DOLocalMove(speakerImageStartPosition, .5f).SetEase(Ease.OutBounce);
+            speakerImage.DOFade(1f, .5f);
+        }
+    }
 
     #endregion
 
     #region background setup
 
-        void CheckChangeBackground()
+    void CheckChangeBackground()
+    {
+        if (dialogSet.dialogList[dialogCount].isChangeBackground)
         {
-            if(dialogSet.dialogList[dialogCount].isChangeBackground)
-            {
-                transitionImage.DOFade(1, 1f);
-            }
+            transitionImage.DOFade(1, 1f);
         }
+    }
 
     #endregion
 
@@ -249,16 +250,16 @@ private void Start()
         AudioSource.clip = nextSound;
         AudioSource.Play();
 
-        if(dialogState == DialogState.ready && dialogCount + 1 == dialogSet.dialogList.Count)
+        if (dialogState == DialogState.ready && dialogCount + 1 == dialogSet.dialogList.Count)
         {
             CheckCompleteDialogInteraction();
         }
-        if(dialogState == DialogState.ready)
+        if (dialogState == DialogState.ready)
         {
             dialogCount++;
             CreateDialog();
         }
-        else if(dialogState == DialogState.progress)
+        else if (dialogState == DialogState.progress)
         {
             ForceDisplayDialog();
         }
@@ -280,18 +281,18 @@ private void Start()
     }
     #endregion
 
-#endregion
+    #endregion
 
-#region state change function
+    #region state change function
 
     private void ChangeDialogState(DialogState state)
     {
         dialogState = state;
     }
 
-#endregion
+    #endregion
 
-#region dialog deactivation
+    #region dialog deactivation
 
     public void StopDialogInteraction()
     {
@@ -301,7 +302,7 @@ private void Start()
 
         dialogButtonAnimator.gameObject.SetActive(false);
         skipButton.gameObject.SetActive(false);
-        
+
         Sequence EndSequence = DOTween.Sequence();
         ChangeDialogState(DialogState.disabled);
         EndSequence.Append(dialogGroup.DOFade(0, 1));
@@ -314,37 +315,38 @@ private void Start()
         EndSequence.Play();
     }
     private void CompleteStopDialogInteraction()
-    {    
-        if(dialogSet.nextState == Dialog.NextState.ENDGAME)
+    {
+        if (dialogSet.nextState == Dialog.NextState.ENDGAME)
         {
             EndGamePage.ActiveEndGame();
         }
-        else if(dialogSet.nextState == Dialog.NextState.DIALOG)
+        else if (dialogSet.nextState == Dialog.NextState.DIALOG)
         {
             StartDialogInteraction();
         }
-        else if(dialogSet.nextState == Dialog.NextState.BATTLE)
+        else if (dialogSet.nextState == Dialog.NextState.BATTLE)
         {
-            LoadingManager.Instance.OnLoadingComplete +=() => dialogCanvas.SetActive(false);
+            LoadingManager.Instance.OnLoadingComplete += () => dialogCanvas.SetActive(false);
             LoadingManager.Instance.OnLoadingComplete += () => GameManager.Instance.OnChangeState(GAMESTATE.INVENTORY);
             LoadingManager.Instance.DoLoading();
         }
     }
 
-#endregion
+    #endregion
 
-#region skip button
+    #region skip button
 
     void SkipDialog()
     {
+        AudioSource.Stop();
         EventSystem.current.SetSelectedGameObject(null);
         CheckCompleteDialogInteraction();
         SongNameDisplayer.ForcecStopDisplay();
     }
 
-#endregion
+    #endregion
 
-#region hide BG button
+    #region hide BG button
 
     private Sequence BGSequence;
     void HideBackground()
@@ -373,7 +375,7 @@ private void Start()
 
         BGSequence.Play();
     }
-    
 
-#endregion
+
+    #endregion
 }
