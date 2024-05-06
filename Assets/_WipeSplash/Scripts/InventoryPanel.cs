@@ -240,11 +240,12 @@ public class InventoryPanel : MonoBehaviour
             for (int _y = 0; _y < itemColumn; _y++)
             {
                 int _gridY = y + _y;
-                if (_gridX >= inventorySlots.Length || _gridY >= inventorySlots[_gridX].Length)
-                {
+                if (_gridX >= inventorySlots.Length)
                     continue;
-                }
-                else if (grids[_gridX, _gridY].item != null)
+                if (_gridY >= inventorySlots[_gridX].Length)
+                    continue;
+
+                if (grids[_gridX, _gridY].item != null)
                 {
                     grids[_gridX, _gridY].ChangeGridSprite(GridStatus.FULL);
                 }

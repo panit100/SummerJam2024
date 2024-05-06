@@ -124,6 +124,8 @@ public class PlayerPanel : MonoBehaviour
                 break;
         }
 
+        SoundManager.Instance.PlaySFX("magic_0" + Random.Range(0, 2));
+
         UpdateStat();
         item.cooldownTime = 0;
 
@@ -138,7 +140,7 @@ public class PlayerPanel : MonoBehaviour
             case 0:
                 SoundManager.Instance.PlaySFX("card");
                 break;
-            case 1 :
+            case 1:
                 SoundManager.Instance.PlaySFX("crossbow");
                 break;
             default:
@@ -184,7 +186,7 @@ public class PlayerPanel : MonoBehaviour
 
         playerImage.sprite = hurtSprite;
         splashImage.color = new Color(1, 1, 1, 1);
-        impactImage.color =new Color(1, 1, 1, 1);
+        impactImage.color = new Color(1, 1, 1, 1);
         splashImage.rectTransform.rotation = quaternion.Euler(new float3(0, 0, Random.Range(0, 360)));
         playerEffect.Play();
         playerImage.rectTransform.localPosition = startPosition + (Vector3.left * bounceValue);

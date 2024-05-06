@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class Item : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
@@ -130,18 +131,6 @@ public class Item : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         cooldownTime += Time.deltaTime;
         if (cooldownTime >= itemData.cooldown)
         {
-            var rand = Random.Range(0, 2);
-            switch (rand)
-            {
-                case 0:
-                    SoundManager.Instance.PlaySFX("magic_01");
-                    break;
-                case 1:
-                    SoundManager.Instance.PlaySFX("magic_02");
-                    break;
-                default:
-                    break;
-            }
             onUseItem?.Invoke(this);
         }
         UpdateCooldown();
@@ -168,5 +157,18 @@ public class Item : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
     public void PlayItemPopDownAnimation()
     {
         transform.DOScale(new Vector3(1, 1, 1), .25f);
+    }
+
+
+
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
     }
 }
