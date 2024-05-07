@@ -57,7 +57,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
     {
         AudioClip c = soundDatas.allSFX.Find(clip => clip.name == fileName);
         var audioSourceTemp = sfxAudios.Where(audio => audio.clip == c && audio.isPlaying).ToList();
-        if (audioSourceTemp.Count > 3)
+        if (audioSourceTemp.Count > 10)
         {
             print("audio play more than 3 audio");
             return;
