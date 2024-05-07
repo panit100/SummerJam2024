@@ -140,7 +140,7 @@ public class GameManager : Singleton<GameManager>
 
     public void OnEndGame()
     {
-        print("EndGame");
+        DialogManager.StartDialogInteraction();
     }
 
     void SetupPlayer()
