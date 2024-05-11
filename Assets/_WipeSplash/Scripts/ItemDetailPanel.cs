@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -35,6 +36,7 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
 
     public void Open(Item item)
     {
+        PlayEntryAnimation();
         currnetItem = item;
         switch (item.ItemData.itemType)
         {
@@ -69,6 +71,12 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         setPanelPosition(item);
 
         canvasGroup.alpha = 1;
+    }
+
+    void PlayEntryAnimation()
+    {
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        transform.DOScale(new Vector3(1, 1, 1), .25f);
     }
 
     void setItemText(ItemData item)
