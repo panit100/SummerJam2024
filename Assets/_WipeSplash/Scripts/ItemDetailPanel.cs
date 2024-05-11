@@ -19,6 +19,7 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
     public TMP_Text itemRegenStamina;
     public TMP_Text itemStaminaCost;
     public TMP_Text itemCooldown;
+    public TMP_Text itemDescription;
 
     RectTransform rect;
 
@@ -89,6 +90,7 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         itemRegenStamina.text = $"Regen Stamina : {item.regenStamina}";
         itemStaminaCost.text = $"Stamina Cost : {item.staminaCost}";
         itemCooldown.text = $"Cooldown : {item.cooldown}";
+        itemDescription.text = $"{item.description}";
     }
 
     void setPanelPosition(Item item)
@@ -121,11 +123,14 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
 
         if (point0.y < 0)
         {
+            print("Point " + point0.y);
             pivot = new Vector2(pivot.x, 0);
         }
 
         if (point2.x > Screen.width)
         {
+            print("Point " + point2.x);
+            print("Screen " + Screen.width);
             pivot = new Vector2(1, pivot.y);
             startPos = minposition;
             offset = new Vector3(-50, 0, 0);
