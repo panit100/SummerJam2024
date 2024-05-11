@@ -28,4 +28,5 @@ public struct ItemData
     public float cooldown;
     public ItemType itemType;
     public string soundId;
+    public string description;
 }
