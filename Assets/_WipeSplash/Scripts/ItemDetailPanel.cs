@@ -123,14 +123,11 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
 
         if (point0.y < 0)
         {
-            print("Point " + point0.y);
             pivot = new Vector2(pivot.x, 0);
         }
 
         if (point2.x > Screen.width)
         {
-            print("Point " + point2.x);
-            print("Screen " + Screen.width);
             pivot = new Vector2(1, pivot.y);
             startPos = minposition;
             offset = new Vector3(-50, 0, 0);

@@ -159,16 +159,21 @@ public class Item : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, I
         transform.DOScale(new Vector3(1, 1, 1), .25f);
     }
 
-
-
-    public class ListNode
+    public Vector2[] GetCornersItem()
     {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
+        RectTransform itemRect = horizontalImage.rectTransform;
+
+        if (verticalImage.IsActive())
         {
-            this.val = val;
-            this.next = next;
+            itemRect = verticalImage.rectTransform;
         }
+
+        var parentLocalPosition = itemRect.parent.parent.transform.localPosition;
+        var originPosition = new Vector2(parentLocalPosition.x - 50, parentLocalPosition.y + 50);
+
+        Vector2 cornor1 = new Vector2(originPosition.x + itemRect.localPosition.x, originPosition.y + itemRect.localPosition.y - itemRect.rect.height);
+        Vector2 cornor2 = new Vector2(originPosition.x + itemRect.localPosition.x + itemRect.rect.width, originPosition.y + itemRect.localPosition.y);
+
+        return new Vector2[] { cornor1, cornor2 };
     }
 }
