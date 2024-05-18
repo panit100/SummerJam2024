@@ -21,6 +21,7 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
     public TMP_Text itemCooldown;
     public TMP_Text itemDescription;
 
+    public RectTransform canvas;
     RectTransform rect;
 
     Item currnetItem;
@@ -115,18 +116,16 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         rect.pivot = pivot;
         rect.localPosition = startPos + offset;
 
-        Vector3[] corners = new Vector3[4];
-        rect.GetWorldCorners(corners);
+        var tempPos = rect.localPosition;
+        Vector2 cornerPoint = new Vector2(tempPos.x + rect.rect.width, tempPos.y - rect.rect.height);
+        var screenCornerPos = GetCanvasCornerPosition();
 
-        Vector3 point0 = Camera.main.WorldToScreenPoint(corners[0]);
-        Vector3 point2 = Camera.main.WorldToScreenPoint(corners[2]);
-
-        if (point0.y < 0)
+        if (cornerPoint.y < screenCornerPos.y)
         {
             pivot = new Vector2(pivot.x, 0);
         }
 
-        if (point2.x > Screen.width)
+        if (cornerPoint.x > screenCornerPos.x)
         {
             pivot = new Vector2(1, pivot.y);
             startPos = minposition;
@@ -136,6 +135,12 @@ public class ItemDetailPanel : Singleton<ItemDetailPanel>
         rect.pivot = pivot;
         rect.localPosition = startPos + offset;
 
+    }
+
+    Vector3 GetCanvasCornerPosition()
+    {
+        Vector3 corner = new Vector3(canvas.rect.width / 2, -canvas.rect.height / 2);
+        return corner;
     }
 
     public void Close()

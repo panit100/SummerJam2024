@@ -205,6 +205,9 @@ public class InventoryPanel : MonoBehaviour
             for (int _y = 0; _y < itemColumn; _y++)
             {
                 int _gridY = y + _y;
+                if (_gridX == -1 || _gridY == -1)
+                    return;
+
                 if (_gridX >= inventorySlots.Length || _gridY >= inventorySlots[_gridX].Length)
                 {
                     continue;
@@ -240,8 +243,17 @@ public class InventoryPanel : MonoBehaviour
             for (int _y = 0; _y < itemColumn; _y++)
             {
                 int _gridY = y + _y;
+
+                if (_gridX == -1)
+                    return;
+
+                if (_gridY == -1)
+                    return;
+
                 if (_gridX >= inventorySlots.Length)
                     continue;
+
+
                 if (_gridY >= inventorySlots[_gridX].Length)
                     continue;
 
