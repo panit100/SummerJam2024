@@ -31,6 +31,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
         var item = PlayerManager.Instance.holdingItem;
         PlayerManager.Instance.OnPutDownItem();
+        SetItemPositionInStorageSpace(item.transform.localPosition, item);
         StoreItem(item);
         MergeItem(item);
 
@@ -53,7 +54,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     void StoreItem(Item item)
     {
-        item.rect.SetParent(itemContainer);
+        // item.rect.SetParent(itemContainer);
         item.gridX = -1;
         item.gridY = -1;
         items.Add(item);
@@ -109,16 +110,16 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         return new Vector2(randomPosX, randomPosY);
     }
 
-    void AddItemToStorage(Item item)
-    {
-        item.SetPosition(GetRandomPositionInStorage());
-        StoreItem(item);
-    }
-
     public void AddItemToStorage(int itemID)
     {
         var item = ItemManager.Instance.createItem(itemID, itemContainer);
-        item.SetPosition(GetRandomPositionInStorage());
+        var randomPos = GetRandomPositionInStorage();
+        randomPos = new Vector2(randomPos.x, randomPos.y);
+
+        item.SetPosition(randomPos);
+
+        SetItemPositionInStorageSpace(randomPos, item);
+
         StoreItem(item);
     }
 
@@ -129,5 +130,48 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         var item = Random.Range(0, 18);
         AddItemToStorage(item);
         randomGashapon = false;
+    }
+
+    Vector2[] getCornerStorageSpace()
+    {
+        Vector2 corner1 = new Vector2(storageSpace.localPosition.x - storageSpace.rect.width / 2, storageSpace.localPosition.y - storageSpace.rect.height / 2);
+        Vector2 corner2 = new Vector2(storageSpace.localPosition.x + storageSpace.rect.width / 2, storageSpace.localPosition.y + storageSpace.rect.height / 2);
+
+        return new Vector2[] { corner1, corner2 };
+    }
+
+    void SetItemPositionInStorageSpace(Vector2 position, Item item)
+    {
+        var cornersItem = item.GetCornersItem();
+
+        Vector2[] storageSpaceCorners = getCornerStorageSpace();
+
+        position = item.transform.localPosition;
+
+        if (cornersItem[0].y < storageSpaceCorners[0].y)
+        {
+            var yRange = storageSpaceCorners[0].y - cornersItem[0].y;
+            position = new Vector2(position.x, position.y + yRange + 10);
+        }
+
+        if (cornersItem[0].x < storageSpaceCorners[0].x)
+        {
+            var xRange = storageSpaceCorners[0].x - cornersItem[0].x;
+            position = new Vector2(position.x + xRange + 10, position.y);
+        }
+
+        if (cornersItem[1].x > storageSpaceCorners[1].x)
+        {
+            var xRange = cornersItem[1].x - storageSpaceCorners[1].x;
+            position = new Vector2(position.x - xRange - 10, position.y);
+        }
+
+        if (cornersItem[1].y > storageSpaceCorners[1].y)
+        {
+            var yRange = cornersItem[1].y - storageSpaceCorners[1].y;
+            position = new Vector2(position.x, position.y - yRange - 10);
+        }
+
+        item.transform.localPosition = position;
     }
 }
