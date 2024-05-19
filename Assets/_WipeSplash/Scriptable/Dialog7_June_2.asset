@@ -18,6 +18,12 @@ MonoBehaviour:
   songName: Reung Tee Kor (What I Asked For)
   artistName: Lula
   dialogList:
+  - speakername: 
+    dialog: The mysterious girl seems like she's having fun.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9900925, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
   - speakername: '?'
     dialog: "You are so strong\u2026"
     speakerSprite: {fileID: 21300000, guid: 87b189983b109e640bb2d9e0dfd64331, type: 3}

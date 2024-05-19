@@ -18,6 +18,12 @@ MonoBehaviour:
   songName: Ter Yang (Remember)
   artistName: Potato
   dialogList:
+  - speakername: 
+    dialog: Mina is panting and smiling.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.9904101, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
   - speakername: Mina
     dialog: I think I lose.
     speakerSprite: {fileID: 21300000, guid: d228a58a08fc5fb4e9d969879a5ea34f, type: 3}

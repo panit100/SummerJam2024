@@ -36,19 +36,16 @@ public class SongNameDisplayer : MonoBehaviour
         DisplaySequence.AppendInterval(3f);
         DisplaySequence.Append(displayerTransform.DOLocalMove(startPosition, 1f));
         DisplaySequence.AppendCallback(StopDisplay);
-
-        DisplaySequence.Play();
     }
     public void ForcecStopDisplay()
     {
         if(DisplaySequence.IsActive())
         {
+            DisplaySequence?.Kill();
             DisplaySequence = DOTween.Sequence();
 
             DisplaySequence.Append(displayerTransform.DOLocalMove(startPosition, 1f));
             DisplaySequence.AppendCallback(StopDisplay);
-
-            DisplaySequence.Play();
         }
     }
     void StopDisplay()

@@ -18,6 +18,13 @@ MonoBehaviour:
   songName: Kon Pae Tee Mai Mee Nam Ta (Regrets)
   artistName: Bird Thongshai
   dialogList:
+  - speakername: 
+    dialog: The water cannot harm the robot. So I throw the bottle that I brought
+      with from last night at him.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.91760564, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
   - speakername: Weird-Ass Robot
     dialog: "Mu-ha-ha-a-a-a, I\u2019m waterproof."
     speakerSprite: {fileID: 21300000, guid: ad2d3071b4c8f774cb3c0fb91a3984e2, type: 3}

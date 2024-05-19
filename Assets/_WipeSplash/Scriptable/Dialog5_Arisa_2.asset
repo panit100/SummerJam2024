@@ -18,6 +18,12 @@ MonoBehaviour:
   songName: Ou Jao Ei (My Dear)
   artistName: Pete Pol
   dialogList:
+  - speakername: 
+    dialog: Arisa is looking at me with an impressive face.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.81671953, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
   - speakername: Arisa
     dialog: "My\u2026 you\u2019re good\u2026"
     speakerSprite: {fileID: 21300000, guid: e4376424ecd4d164f8745d23b19debfa, type: 3}

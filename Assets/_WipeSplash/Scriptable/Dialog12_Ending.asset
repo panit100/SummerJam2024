@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904a84101aa5f74e86dda8e4986bf36, type: 3}
   m_Name: Dialog12_Ending
   m_EditorClassIdentifier: 
-  nextState: 0
+  nextState: 2
   backgroundSprite: {fileID: 21300000, guid: 04de052e55c95304ba00f5435997f9c2, type: 3}
   bgmName: Dialog - Prib Ta - Bird Thong Shai x Stamp
   songName: Prib Ta (Shooting Star)

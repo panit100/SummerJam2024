@@ -18,6 +18,13 @@ MonoBehaviour:
   songName: Phob Pan (Wish)
   artistName: Cocktail
   dialogList:
+  - speakername: 
+    dialog: My final opponent is standing in front of me. Her eyes are filled with
+      sadness eventhough she is smiling.
+    speakerSprite: {fileID: 0}
+    color: {r: 0, g: 1, b: 0.96394205, a: 1}
+    fontSize: 54
+    isChangeBackground: 0
   - speakername: Fern
     dialog: "Hmp\u2026 I lose."
     speakerSprite: {fileID: 21300000, guid: 833755470e3b30446b1f6ec70b446379, type: 3}

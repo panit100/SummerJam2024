@@ -37,7 +37,6 @@ public class DialogManager : Singleton<DialogManager>
     [SerializeField] private AudioClip typeSound;
     [SerializeField] private AudioClip nextSound;
 
-
     [Header("Dialog State")]
     [SerializeField] private DialogState dialogState;
     [SerializeField]
@@ -46,6 +45,11 @@ public class DialogManager : Singleton<DialogManager>
         disabled, progress, ready
     }
     [SerializeField] private int dialogCount;
+
+    [Header("Type Speed")]
+    [SerializeField] private float currentTypeSpeed;
+    [SerializeField] private float normalTypeSpeed = 0.05f;
+    [SerializeField] private float fastTypeSpeed = 0.005f;
 
     [Header("Song Name Displayer")]
     [SerializeField] private SongNameDisplayer SongNameDisplayer;
@@ -164,6 +168,7 @@ public class DialogManager : Singleton<DialogManager>
         // text setup
         speakerText.text = dialogSet.dialogList[dialogCount].speakername;
         dialogText.text = "";
+        currentTypeSpeed = normalTypeSpeed;
         dialogText.color = dialogSet.dialogList[dialogCount].color;
         dialogText.fontSize = dialogSet.dialogList[dialogCount].fontSize;
         char[] charArray = dialogSet.dialogList[dialogCount].dialog.ToCharArray();
@@ -296,6 +301,7 @@ public class DialogManager : Singleton<DialogManager>
 
     public void StopDialogInteraction()
     {
+
         StopAllCoroutines();
         dialogText.text = "";
         speakerText.text = "";
@@ -338,6 +344,7 @@ public class DialogManager : Singleton<DialogManager>
 
     void SkipDialog()
     {
+        currentTypeSpeed = fastTypeSpeed;
         AudioSource.Stop();
         EventSystem.current.SetSelectedGameObject(null);
         CheckCompleteDialogInteraction();
