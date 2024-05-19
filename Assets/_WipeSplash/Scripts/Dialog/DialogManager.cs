@@ -46,11 +46,6 @@ public class DialogManager : Singleton<DialogManager>
     }
     [SerializeField] private int dialogCount;
 
-    [Header("Type Speed")]
-    [SerializeField] private float currentTypeSpeed;
-    [SerializeField] private float normalTypeSpeed = 0.05f;
-    [SerializeField] private float fastTypeSpeed = 0.005f;
-
     [Header("Song Name Displayer")]
     [SerializeField] private SongNameDisplayer SongNameDisplayer;
 
@@ -133,6 +128,7 @@ public class DialogManager : Singleton<DialogManager>
         dialogCanvas.SetActive(true);
         transitionImage.gameObject.SetActive(true);
         skipButton.gameObject.SetActive(true);
+        skipButton.interactable = false;
         hideBackgroundButton.gameObject.SetActive(true);
 
         backgroundImage.sprite = dialogSetList[dialogSetCount].backgroundSprite;
@@ -140,13 +136,12 @@ public class DialogManager : Singleton<DialogManager>
 
         Sequence StartSequence = DOTween.Sequence();
 
-        StartSequence.Append(transitionImage.DOFade(0, 2.5f));
-        StartSequence.AppendCallback(() => transitionImage.gameObject.SetActive(false));
-        StartSequence.Append(dialogGroup.DOFade(1, 1));
-        StartSequence.AppendCallback(() => SongNameDisplayer.DisplaySongName(dialogSet.songName, dialogSet.artistName));
-        StartSequence.AppendCallback(CreateDialog);
-
-        StartSequence.Play();
+        StartSequence.Append(transitionImage.DOFade(0, 2.5f)).
+        AppendCallback(() => transitionImage.gameObject.SetActive(false)).
+        Append(dialogGroup.DOFade(1, 1)).
+        AppendCallback(() => SongNameDisplayer.DisplaySongName(dialogSet.songName, dialogSet.artistName)).
+        AppendCallback(CreateDialog).
+        AppendCallback(() => skipButton.interactable = true);
     }
 
     #endregion
@@ -168,7 +163,6 @@ public class DialogManager : Singleton<DialogManager>
         // text setup
         speakerText.text = dialogSet.dialogList[dialogCount].speakername;
         dialogText.text = "";
-        currentTypeSpeed = normalTypeSpeed;
         dialogText.color = dialogSet.dialogList[dialogCount].color;
         dialogText.fontSize = dialogSet.dialogList[dialogCount].fontSize;
         char[] charArray = dialogSet.dialogList[dialogCount].dialog.ToCharArray();
@@ -344,7 +338,6 @@ public class DialogManager : Singleton<DialogManager>
 
     void SkipDialog()
     {
-        currentTypeSpeed = fastTypeSpeed;
         AudioSource.Stop();
         EventSystem.current.SetSelectedGameObject(null);
         CheckCompleteDialogInteraction();
