@@ -39,14 +39,11 @@ public class SongNameDisplayer : MonoBehaviour
     }
     public void ForcecStopDisplay()
     {
-        if(DisplaySequence.IsActive())
-        {
-            DisplaySequence?.Kill();
-            DisplaySequence = DOTween.Sequence();
+        DisplaySequence?.Kill();
+        DisplaySequence = DOTween.Sequence();
 
-            DisplaySequence.Append(displayerTransform.DOLocalMove(startPosition, 1f));
-            DisplaySequence.AppendCallback(StopDisplay);
-        }
+        DisplaySequence.Append(displayerTransform.DOLocalMove(startPosition, 1f));
+        DisplaySequence.AppendCallback(StopDisplay);
     }
     void StopDisplay()
     {
