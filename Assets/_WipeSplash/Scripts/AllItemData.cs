@@ -57,7 +57,7 @@ public static class AllItemData
             cooldown = 0.8f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Tactical_Gun_3",
-            description = " With the research and use of advanced technology, Asian Tech Water Gun has the highest fire rate for tactical water guns. You buy this gun on social media or online shop. Don't start the fight with the one holding it."
+            description = "With the research and use of advanced technology, Asian Tech Water Gun has the highest fire rate for tactical water guns. You buy this gun on social media or online shop. Don't start the fight with the one holding it."
         },
         new ItemData{
             id = 3,
@@ -75,7 +75,7 @@ public static class AllItemData
             cooldown = 0.1f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Handmade_Gun_1&2",
-            description = " Non-lethal wonderful creation of Thailand. Firing power goes from low to medium, but recharging time is quite higher than tactical water gun."
+            description = "Non-lethal wonderful creation of Thailand. Firing power goes from low to medium, but recharging time is quite higher than tactical water gun."
         },
         new ItemData{
             id = 4,
@@ -93,7 +93,7 @@ public static class AllItemData
             cooldown = 2f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Handmade_Gun_1&2",
-            description = " The better version of Thai-Made Water Gun, upgraded by putting the two pipes together. The firing power greatly increases with the cost of fire rate"
+            description = "The better version of Thai-Made Water Gun, upgraded by putting the two pipes together. The firing power greatly increases with the cost of fire rate"
         },
         new ItemData{
             id = 5,
@@ -111,7 +111,7 @@ public static class AllItemData
             cooldown = 2.2f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Handmade_Gun_3",
-            description = " Top-notch hand-made water gun, another level of water gun creation. The invention's gratefulness is the second to Buddha's enlightenment The extreme firing power comes with medium recharge time. Just look at its size."
+            description = "Top-notch hand-made water gun, another level of water gun creation. The invention's gratefulness is the second to Buddha's enlightenment The extreme firing power comes with medium recharge time. Just look at its size."
         },
         new ItemData{
             id = 6,
@@ -129,7 +129,7 @@ public static class AllItemData
             cooldown = 2f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Bucket_2",
-            description = " Traditional bucket that has been used in every Thai ceremonial event. You can use it to splash the water. With light metal material, sometimes people use them to slap their friend's head instead of splashing the water."
+            description = "Traditional bucket that has been used in every Thai ceremonial event. You can use it to splash the water. With light metal material, sometimes people use them to slap their friend's head instead of splashing the water."
         },
         new ItemData{
             id = 7,
@@ -147,7 +147,7 @@ public static class AllItemData
             cooldown = 2.4f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Bucket_1",
-            description = " One of young pickup-truckers' standard tools for Water Festival. It has a unique property, 40% fixed chance that the bucket will slip out of your hand after splashing the water and land a direct physical hit to the unlucky man."
+            description = "One of young pickup-truckers' standard tools for Water Festival. It has a unique property, 40% fixed chance that the bucket will slip out of your hand after splashing the water and land a direct physical hit to the unlucky man."
         },
         new ItemData{
             id = 8,
@@ -165,7 +165,7 @@ public static class AllItemData
             cooldown = 2.7f,
             itemType = ItemType.ATTACK,
             soundId = "SFX_Inventory_Bucket_3",
-            description = " The most powerful weapon of all. When fully filled with water and splashed out, with high force and water volume can send someone knocked out instantly. It's like hitting by a truck. When you open your eyes from unconsciousness. You just awake in the other world."
+            description = "The most powerful weapon of all. When fully filled with water and splashed out, with high force and water volume can send someone knocked out instantly. It's like hitting by a truck. When you open your eyes from unconsciousness. You just awake in the other world."
         },
         new ItemData{
             id = 9,
@@ -183,7 +183,7 @@ public static class AllItemData
             cooldown = 0,
             itemType = ItemType.DEFENSE,
             soundId = "SFX_Inventory_Wears_1&2",
-            description = " Elephant Clothes, the essential protection for the Water Festival. There was a story of the man who wore elephant clothes, he was shot by ten men, he knew he's done for but the elephant stripe on his shirt floating out and deflected all of the water away. At that time, he realized that the spiritual power of the national animal was watching over him. Or maybe he's too greened. The elephant stripe is cool by the way."
+            description = "Elephant Clothes, the essential protection for the Water Festival. There was a story of the man who wore elephant clothes, he was shot by ten men, he knew he's done for but the elephant stripe on his shirt floating out and deflected all of the water away. At that time, he realized that the spiritual power of the national animal was watching over him. Or maybe he's too greened. The elephant stripe is cool by the way."
         },
         new ItemData{
             id = 10,
@@ -201,7 +201,7 @@ public static class AllItemData
             cooldown = 0,
             itemType = ItemType.DEFENSE,
             soundId = "SFX_Inventory_Wears_1&2",
-            description = " If Elephant Clothes is empowered by supernatural power and pseudoscience. Hawaii Shirt is the start pack of new generation people, developed by scientific method and modern technology. The synthetic fiber is efficiently made to protect the wearer from the water. The color of the shirt helps you to be less attacked. It is meant to be worn for the Water Festival."
+            description = "If Elephant Clothes is empowered by supernatural power and pseudoscience. Hawaii Shirt is the start pack of new generation people, developed by scientific method and modern technology. The synthetic fiber is efficiently made to protect the wearer from the water. The color of the shirt helps you to be less attacked. It is meant to be worn for the Water Festival."
         },
         new ItemData{
             id = 11,
@@ -219,7 +219,7 @@ public static class AllItemData
             cooldown = 0,
             itemType = ItemType.DEFENSE,
             soundId = "SFX_Inventory_Wears_3",
-            description = " The traditional ware with centuries of history. Thai Suit have been modified, improved, and used for a long time even in wars or in peace. No wonder why new generation of Thai young men would love to wear them in special events including Water Festival as a costume or for personal protection. You'll never know that you might have been hit by something besides water."
+            description = "The traditional ware with centuries of history. Thai Suit have been modified, improved, and used for a long time even in wars or in peace. No wonder why new generation of Thai young men would love to wear them in special events including Water Festival as a costume or for personal protection. You'll never know that you might have been hit by something besides water."
         },
         new ItemData{
             id = 12,
@@ -237,7 +237,7 @@ public static class AllItemData
             cooldown = 4f,
             itemType = ItemType.SUPPORT,
             soundId = "SFX_Inventory_Food_1",
-            description = " Grilled Chicken known as Thailand's greatest food for many centuries and exists on every page of the country's history. In most festivals and ceremonies, grilled chickens are served as the main course. If you're looking for the best Grilled Chicken, keep your eye on the cook wearing Thai loincloth on his waist. He's the king of Grilled Chicken"
+            description = "Grilled Chicken known as Thailand's greatest food for many centuries and exists on every page of the country's history. In most festivals and ceremonies, grilled chickens are served as the main course. If you're looking for the best Grilled Chicken, keep your eye on the cook wearing Thai loincloth on his waist. He's the king of Grilled Chicken"
         },
         new ItemData{
             id = 13,
@@ -255,7 +255,7 @@ public static class AllItemData
             cooldown = 3f,
             itemType = ItemType.SUPPORT,
             soundId = "SFX_Inventory_Food_2",
-            description = " Whoever you are, where are you from, it does not matter. If you already eat Non-Spicy Papaya Salad. Your skin will be turned brown-red, you start to speak something you can't even understand. Keep it in mind that you already turned into Esan man (Thai north-east natives)."
+            description = "Whoever you are, where are you from, it does not matter. If you already eat Non-Spicy Papaya Salad. Your skin will be turned brown-red, you start to speak something you can't even understand. Keep it in mind that you already turned into Esan man (Thai north-east natives)."
         },
         new ItemData{
             id = 14,
@@ -273,7 +273,7 @@ public static class AllItemData
             cooldown = 3f,
             itemType = ItemType.SUPPORT,
             soundId = "SFX_Inventory_Food_3",
-            description = " Richman's Food, invented by Richman, manufactured by Richman. If you are not rich, you are not worthy to taste it."
+            description = "Richman's Food, invented by Richman, manufactured by Richman. If you are not rich, you are not worthy to taste it."
         },
         new ItemData{
             id = 15,
@@ -291,7 +291,7 @@ public static class AllItemData
             cooldown = 3f,
             itemType = ItemType.SUPPORT,
             soundId = "SFX_Inventory_Drink_1",
-            description = " Don't underestimate Winged Beer. If you see whoever holding this beer can in their hand at the Water Festival, don't get closer to them. But if you want to know what might happen, bring helmet protection for your own safety."
+            description = "Don't underestimate Winged Beer. If you see whoever holding this beer can in their hand at the Water Festival, don't get closer to them. But if you want to know what might happen, bring helmet protection for your own safety."
         },
         new ItemData{
             id = 16,
@@ -309,7 +309,7 @@ public static class AllItemData
             cooldown = 4f,
             itemType = ItemType.SUPPORT,
             soundId = "SFX_Inventory_Drink_2",
-            description = " Emergency Weapon is actually the drink that can calm you after a few gulps. Somehow, after too many gulps, it changed into a weapon. The bottle's neck is smoother to hold, and you need to pick a fight with people who stare at you for 0.001 second."
+            description = "Emergency Weapon is actually the drink that can calm you after a few gulps. Somehow, after too many gulps, it changed into a weapon. The bottle's neck is smoother to hold, and you need to pick a fight with people who stare at you for 0.001 second."
         },
         new ItemData{
             id = 17,
@@ -327,7 +327,7 @@ public static class AllItemData
             cooldown = 4.5f,
             itemType = ItemType.SUPPORT,
             soundId = "SFX_Inventory_Drink_3",
-            description = " The 40-degree drink, also known as Thai Vodka. To Esan people (Thai north-east natives), it is just a pure refreshing bottomless water bottle that they never get tired of. Be wary that to non-native, two shots of Esan Pure Water can black you out. Keep an eye out for the tea brown bottle and don't forget to read the label."
+            description = "The 40-degree drink, also known as Thai Vodka. To Esan people (Thai north-east natives), it is just a pure refreshing bottomless water bottle that they never get tired of. Be wary that to non-native, two shots of Esan Pure Water can black you out. Keep an eye out for the tea brown bottle and don't forget to read the label."
         },
     };
 }
