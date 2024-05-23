@@ -39,6 +39,7 @@ public class PlayerPanel : MonoBehaviour
     [Header("System")]
     public InventoryPanel inventory;
     public PlayerPanel enemy;
+    public ItemEffect ItemEffect; 
 
     float currentHp = 0;
     int currentBlock = 0;
@@ -148,7 +149,7 @@ public class PlayerPanel : MonoBehaviour
         }
         if (currentBlock > 0)
         {
-            // TODO: add block effect
+            ItemEffect.PlayBlockEffect();
             SoundManager.Instance.PlaySFX("SFX_Effect_Block");
 
             currentBlock -= damage;
@@ -209,10 +210,10 @@ public class PlayerPanel : MonoBehaviour
 
     void OnRegenStamina(float regenStamina)
     {
-        // TODO: increase stamina effect
-        SoundManager.Instance.PlaySFX("SFX_Effect_Stamina");
-
         currentStamina += regenStamina;
+
+        if(regenStamina > this.regenStamina)
+            ItemEffect.PlayStaminaEffect();
 
         if (currentStamina >= stamina)
             currentStamina = stamina;
@@ -222,8 +223,7 @@ public class PlayerPanel : MonoBehaviour
 
     void OnRegenHp(float regenHp)
     {
-        // TODO: regen hp effect
-        SoundManager.Instance.PlaySFX("SFX_Effect_Heal");
+        ItemEffect.PlayHealEffect();
 
         currentHp += regenHp;
         if (currentHp >= hp)
