@@ -93,7 +93,7 @@ MonoBehaviour:
     fontSize: 54
     isChangeBackground: 0
   - speakername: 
-    dialog: I help as many people as I can.
+    dialog: I help as many people as I can. And escape this stupid replica city.
     speakerSprite: {fileID: 0}
     color: {r: 0, g: 1, b: 0.9607844, a: 1}
     fontSize: 54
