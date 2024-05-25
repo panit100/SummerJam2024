@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -16,6 +17,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     public UnityAction onMergeItem;
 
     public bool randomGashapon = false;
+    [SerializeField] CanvasGroup gachaCanvasGroup;
     
     
 
@@ -52,6 +54,13 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
         {
             AddItemToStorage(itemID);
         }
+    }
+
+    public void EnableCanvasGroup(bool result)
+    {
+        gachaCanvasGroup.interactable = result;
+        gachaCanvasGroup.blocksRaycasts = result;
+        gachaCanvasGroup.alpha = result ? 1f : 0f;
     }
 
     void StoreItem(Item item)
@@ -129,6 +138,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     {
         if (!randomGashapon)
             return;
+        gachaCanvasGroup.DOFade(0f, 1f).OnComplete((() => { EnableCanvasGroup(false);}));
         var item = Random.Range(0, 18);
         AddItemToStorage(item);
         randomGashapon = false;

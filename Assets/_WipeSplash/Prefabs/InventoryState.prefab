@@ -1708,6 +1708,7 @@ MonoBehaviour:
   itemContainer: {fileID: 1918758043844972859}
   startItemIds: 0300000007000000090000000c0000000c00000010000000
   randomGashapon: 0
+  gachaCanvasGroup: {fileID: 873440179745076812}
 --- !u!1 &1918577804316735559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,8 +2110,8 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4927751283561361214}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
+  m_Alpha: 0
+  m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &7413140647726005333

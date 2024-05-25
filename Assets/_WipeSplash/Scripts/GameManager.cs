@@ -154,6 +154,7 @@ public class GameManager : Singleton<GameManager>
             if (isPlayerLose)
             {
                 StoragePanel.Instance.randomGashapon = true;
+                StoragePanel.Instance.EnableCanvasGroup(true);
                 OnChangeState(GAMESTATE.INVENTORY);
             }
             else
