@@ -32,6 +32,9 @@ public class GameManager : Singleton<GameManager>
     public Canvas GameCanvas;
     public Canvas DialogueCanvas;
     public CanvasGroup inventoryStatePanel;
+    public CanvasGroup inventory;
+    public CanvasGroup storage;
+    public CanvasGroup enemyInventory;
     public CanvasGroup fightStatePanel;
     public TMP_Text winText;
     public TMP_Text loseText;
@@ -89,6 +92,15 @@ public class GameManager : Singleton<GameManager>
                 fightStatePanel.alpha = 0;
                 fightStatePanel.blocksRaycasts = false;
                 fightStatePanel.interactable = false;
+
+                enemyInventory.alpha = 0;
+                enemyInventory.blocksRaycasts = false;
+                enemyInventory.interactable = false;
+
+                storage.alpha = 1;
+                storage.blocksRaycasts = true;
+                storage.interactable = true;
+
                 break;
             case GAMESTATE.SETUPBATTLE:
                 SoundManager.Instance.ChangeBGM("Battle_PaShed");
@@ -100,6 +112,14 @@ public class GameManager : Singleton<GameManager>
                 inventoryStatePanel.alpha = 0;
                 inventoryStatePanel.blocksRaycasts = false;
                 inventoryStatePanel.interactable = false;
+
+                storage.alpha = 0;
+                storage.blocksRaycasts = false;
+                storage.interactable = false;
+
+                enemyInventory.alpha = 1;
+                enemyInventory.blocksRaycasts = true;
+                enemyInventory.interactable = true;
                 SetupPlayer();
                 SetupEnemy(currentEnemy);
                 break;

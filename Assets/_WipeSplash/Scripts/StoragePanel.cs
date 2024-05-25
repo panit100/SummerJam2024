@@ -54,7 +54,7 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
 
     void StoreItem(Item item)
     {
-        // item.rect.SetParent(itemContainer);
+        item.rect.SetParent(itemContainer);
         item.gridX = -1;
         item.gridY = -1;
         items.Add(item);
