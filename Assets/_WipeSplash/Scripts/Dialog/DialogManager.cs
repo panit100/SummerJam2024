@@ -309,9 +309,9 @@ public class DialogManager : Singleton<DialogManager>
         EndSequence.Join(speakerImage.DOFade(0, .5f));
         EndSequence.AppendCallback(() => speakerImage.sprite = null);
         EndSequence.AppendCallback(() => transitionImage.gameObject.SetActive(true));
-        EndSequence.Append(transitionImage.DOFade(1, 3f));
+        if(dialogSet.nextState != Dialog.NextState.BATTLE)  
+            EndSequence.Append(transitionImage.DOFade(1, 3f));
         EndSequence.AppendCallback(CompleteStopDialogInteraction);
-
         EndSequence.Play();
     }
     private void CompleteStopDialogInteraction()

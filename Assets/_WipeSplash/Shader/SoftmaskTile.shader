@@ -2,7 +2,7 @@ Shader "Hidden/UI/Default (SoftMaskable2)"
 {
     Properties
     {
-        [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
+         _MainTex ("Sprite Texture", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
           _SpeedX ("Speed X", float) = 1.0
         _SpeedY ("Speed Y", float) = 1.0
