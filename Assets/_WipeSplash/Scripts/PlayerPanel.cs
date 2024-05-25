@@ -96,6 +96,8 @@ public class PlayerPanel : MonoBehaviour
 
     public void OnEndBattle()
     {
+        if (currentHp <= 0) playerImage.sprite = hurtSprite;
+
         foreach (var item in inventory.Items)
         {
             item.onUseItem -= OnUseItem;
@@ -200,7 +202,8 @@ public class PlayerPanel : MonoBehaviour
     }
     void CompleteBounce()
     {
-        playerImage.sprite = defaultSprite;
+        if (currentHp > 0)
+            playerImage.sprite = defaultSprite;
     }
 
     void OnDie()
