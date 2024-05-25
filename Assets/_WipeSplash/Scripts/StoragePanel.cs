@@ -16,6 +16,8 @@ public class StoragePanel : Singleton<StoragePanel>, IPointerClickHandler
     public UnityAction onMergeItem;
 
     public bool randomGashapon = false;
+    
+    
 
     public void OnPointerClick(PointerEventData eventData)
     {

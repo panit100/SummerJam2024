@@ -48,6 +48,8 @@ public class GameManager : Singleton<GameManager>
     [Header("System")]
     [SerializeField] private DialogManager DialogManager;
 
+    bool isPlayerLose;
+
     protected override void InitAfterAwake()
     {
 
@@ -149,10 +151,15 @@ public class GameManager : Singleton<GameManager>
 
         if (currentEnemy < enemies.Count)
         {
-            // StoragePanel.Instance.randomGashapon = true;
-            // OnChangeState(GAMESTATE.INVENTORY);
-            DialogManager.StartDialogInteraction();
-
+            if (isPlayerLose)
+            {
+                StoragePanel.Instance.randomGashapon = true;
+                OnChangeState(GAMESTATE.INVENTORY);
+            }
+            else
+            {
+                DialogManager.StartDialogInteraction();
+            }
         }
         else
             OnEndGame();
@@ -198,13 +205,14 @@ public class GameManager : Singleton<GameManager>
             //TODO open lose text
             winText.gameObject.SetActive(false);
             loseText.gameObject.SetActive(true);
+            isPlayerLose = true;
         }
         else
         {
             //TODO open win text
             winText.gameObject.SetActive(true);
             loseText.gameObject.SetActive(false);
-
+            isPlayerLose = false;
             Item item1 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
             Item item2 = enemyPanel.inventory.Items[UnityEngine.Random.Range(0, enemyPanel.inventory.Items.Count)];
             while (item2 == item1)

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70223a3223e564846983133e7ef11836, type: 3}
   m_Name: sample
   m_EditorClassIdentifier: 
-  showFoldout: 0
+  showFoldout: 1
   amount: 0.8
   perlin: 0
   perlinTimeMulti: 20
@@ -64,4 +64,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  distanceOverTimeMulti: 0.5
+  distanceOverTimeMulti: 0.0001
