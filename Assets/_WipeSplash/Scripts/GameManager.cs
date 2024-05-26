@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
 
     [Header("Background")]
     [SerializeField] private Image backgroundImage;
+    [SerializeField] GameObject EnemyPivot; //Enemy Pivot in enemy fight stage
 
     [Header("UI")]
 
@@ -60,6 +61,7 @@ public class GameManager : Singleton<GameManager>
         playerPanel.onDie += OnDie;
         enemyPanel.onDie += OnDie;
         OnChangeState(GAMESTATE.INVENTORY);
+        EnemyPivot.SetActive(false);
     }
 
 
@@ -77,6 +79,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GAMESTATE.INVENTORY:
                 GameCanvas.enabled = true;
+                EnemyPivot.SetActive(false);
                 loseText.gameObject.SetActive(false);
                 winText.gameObject.SetActive(false);
                 endButton.gameObject.SetActive(false);
@@ -106,7 +109,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GAMESTATE.SETUPBATTLE:
                 SoundManager.Instance.ChangeBGM("Battle_PaShed");
-
+                EnemyPivot.SetActive(true);
                 fightStatePanel.alpha = 1;
                 fightStatePanel.blocksRaycasts = true;
                 fightStatePanel.interactable = true;
